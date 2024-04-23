@@ -1,0 +1,10 @@
+{
+    "IP": "127.0.0.1",
+    "P_count": 2000,
+    "P_fee": 20,
+    "account": "root",
+    "database": "car_system",
+    "park_name": "CAR123",
+    "password": "123456",
+    "port": 3306
+}
