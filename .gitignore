@@ -1,4 +1,4 @@
 # Qt Creator 
 *.pro.user*
 CMakeLists.txt.user*
-build\
+build/

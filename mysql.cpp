@@ -1,5 +1,5 @@
 #include "mysql.h"
-#include "initfile.h"
+#include "init.h"
 mysql::mysql(QObject *parent) : QObject(parent)
 {
     mysql_init();
@@ -19,7 +19,7 @@ mysql::~mysql()
 void mysql::mysql_init()
 {
     //使用初始化后的数据
-    QString filePath =QApplication::applicationDirPath() + "/parkinginit.json";
+    QString filePath = QApplication::applicationDirPath() + "/parkinginit.json";
     QFile file(filePath);
     //如果可以打开文件并读取文件
     if(file.open(QIODevice::ReadOnly | QIODevice::Text))

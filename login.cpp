@@ -2,8 +2,8 @@
 #include "ui_mainwindow.h"
 #include <QGraphicsDropShadowEffect>
 #include <QCryptographicHash> //加载加密函数库
-#include "signup.h"
 #include <QSettings>
+#include "signup.h"
 #include "car.h"
 
 //加密函数，输入密码，返回hash值
@@ -88,14 +88,15 @@ void MainWindow::on_pushButton_2_clicked()
     else if(query.next())
     {
         // 记住我
-        if() {}
+        // if() {};
         qDebug()<<"Login success";
         // 进入主页面
-        // Car *w = new Car();
-        // w->show();
+        Car *w = new Car();
+        qDebug()<< w;
+        w->show();
 
         //关闭当前的注册页面
-        // this->close();
+        this->close();
     }
     else
     {

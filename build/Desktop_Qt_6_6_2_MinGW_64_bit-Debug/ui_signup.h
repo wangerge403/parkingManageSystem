@@ -30,12 +30,12 @@ public:
     QVBoxLayout *verticalLayout_4;
     QSpacerItem *verticalSpacer_2;
     QHBoxLayout *horizontalLayout;
-    QLabel *label_3;
     QSpacerItem *horizontalSpacer;
     QLabel *label_title;
     QSpacerItem *horizontalSpacer_2;
     QSpacerItem *verticalSpacer;
     QVBoxLayout *verticalLayout_3;
+    QLabel *label_3;
     QLineEdit *lineEdit_username;
     QLabel *label_4;
     QLineEdit *lineEdit_password;
@@ -100,17 +100,6 @@ public:
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
-        label_3 = new QLabel(Signup);
-        label_3->setObjectName("label_3");
-        QSizePolicy sizePolicy2(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
-        label_3->setSizePolicy(sizePolicy2);
-        label_3->setStyleSheet(QString::fromUtf8("font: 15pt \"\345\255\227\345\277\203\345\235\212\347\214\253\347\232\204\345\244\251\347\251\272\344\271\213\345\237\216\357\274\210\347\211\271\345\210\253\345\256\232\345\210\266\347\211\210\357\274\211\";"));
-
-        horizontalLayout->addWidget(label_3);
-
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
@@ -134,6 +123,17 @@ public:
 
         verticalLayout_3 = new QVBoxLayout();
         verticalLayout_3->setObjectName("verticalLayout_3");
+        label_3 = new QLabel(Signup);
+        label_3->setObjectName("label_3");
+        QSizePolicy sizePolicy2(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
+        label_3->setSizePolicy(sizePolicy2);
+        label_3->setStyleSheet(QString::fromUtf8("font: 15pt \"\345\255\227\345\277\203\345\235\212\347\214\253\347\232\204\345\244\251\347\251\272\344\271\213\345\237\216\357\274\210\347\211\271\345\210\253\345\256\232\345\210\266\347\211\210\357\274\211\";"));
+
+        verticalLayout_3->addWidget(label_3);
+
         lineEdit_username = new QLineEdit(Signup);
         lineEdit_username->setObjectName("lineEdit_username");
         lineEdit_username->setMinimumSize(QSize(0, 57));
@@ -314,8 +314,8 @@ public:
     {
         Signup->setWindowTitle(QCoreApplication::translate("Signup", "Form", nullptr));
         label_login_image->setText(QString());
-        label_3->setText(QCoreApplication::translate("Signup", "\347\224\250\346\210\267\345\220\215", nullptr));
         label_title->setText(QCoreApplication::translate("Signup", "\347\224\250\346\210\267\346\263\250\345\206\214", nullptr));
+        label_3->setText(QCoreApplication::translate("Signup", "\347\224\250\346\210\267\345\220\215", nullptr));
         lineEdit_username->setText(QString());
         lineEdit_username->setPlaceholderText(QCoreApplication::translate("Signup", "\350\257\267\350\276\223\345\205\245\347\224\250\346\210\267\345\220\215", nullptr));
         label_4->setText(QCoreApplication::translate("Signup", "\345\257\206\347\240\201", nullptr));

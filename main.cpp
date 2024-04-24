@@ -1,23 +1,22 @@
+#include "login.h"
 #include <QSqlDatabase>
 #include <QApplication>
-// #include <opencv2/opencv.hpp>
+#include "init.h"
+#include <opencv2/opencv.hpp>
 #include <QCoreApplication>
-#include "login.h"
-#include "initfile.h"
 
-#undef main
 int main(int argc, char *argv[])
 {
-    // qRegisterMetaType<cv::Mat>("cv::Mat");
+    qRegisterMetaType<cv::Mat>("cv::Mat");
     QApplication a(argc, argv);
 
     //判断是否存在初始化文件若不存在启动，初始化程序
-    QString filePath = QApplication::applicationDirPath() + "/parkinginit.json";
+    QString filePath =QApplication::applicationDirPath() + "/parkinginit.json";
     QFile file(filePath);
     //如果文件不能打开不存在
     if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
     {
-        qDebug()<<"文件不存在，初始化!";
+        qDebug()<<"文件不存在，初始化!77777";
         initFile *initmysql_file = new initFile;
         initmysql_file->show();
         file.close();
@@ -25,6 +24,7 @@ int main(int argc, char *argv[])
     else
     {
         //文件存在启动主程序
+        qDebug()<<"打开登录页11111";
         MainWindow *w = new MainWindow;
         w->show();
         file.close();

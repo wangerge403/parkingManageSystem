@@ -41,7 +41,7 @@ public:
     QLineEdit *lineEdit_password;
     QSpacerItem *verticalSpacer;
     QGridLayout *gridLayout_3;
-    QCheckBox *remeberBox;
+    QCheckBox *remebermeBox;
     QHBoxLayout *horizontalLayout;
     QPushButton *pushButton_2;
     QPushButton *return_2;
@@ -130,10 +130,10 @@ public:
         gridLayout_3 = new QGridLayout();
         gridLayout_3->setObjectName("gridLayout_3");
         gridLayout_3->setContentsMargins(9, 10, -1, -1);
-        remeberBox = new QCheckBox(centralwidget);
-        remeberBox->setObjectName("remeberBox");
+        remebermeBox = new QCheckBox(centralwidget);
+        remebermeBox->setObjectName("remebermeBox");
 
-        gridLayout_3->addWidget(remeberBox, 0, 0, 1, 1);
+        gridLayout_3->addWidget(remebermeBox, 0, 0, 1, 1);
 
 
         verticalLayout->addLayout(gridLayout_3);
@@ -194,12 +194,12 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         label_image->setText(QString());
         label->setText(QCoreApplication::translate("MainWindow", "\347\224\250\346\210\267\345\220\215", nullptr));
-        lineEdit_username->setText(QString());
+        lineEdit_username->setText(QCoreApplication::translate("MainWindow", "admin123", nullptr));
         lineEdit_username->setPlaceholderText(QCoreApplication::translate("MainWindow", "\350\257\267\350\276\223\345\205\245\347\224\250\346\210\267\345\220\215", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "\345\257\206\347\240\201", nullptr));
-        lineEdit_password->setText(QString());
+        lineEdit_password->setText(QCoreApplication::translate("MainWindow", "123456", nullptr));
         lineEdit_password->setPlaceholderText(QCoreApplication::translate("MainWindow", "\350\257\267\350\276\223\345\205\245\347\224\250\344\272\216\345\257\206\347\240\201", nullptr));
-        remeberBox->setText(QCoreApplication::translate("MainWindow", "\350\256\260\344\275\217\346\210\221", nullptr));
+        remebermeBox->setText(QCoreApplication::translate("MainWindow", "\350\256\260\344\275\217\346\210\221", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "\347\231\273\345\275\225", nullptr));
         return_2->setText(QCoreApplication::translate("MainWindow", "\346\263\250\345\206\214", nullptr));
     } // retranslateUi

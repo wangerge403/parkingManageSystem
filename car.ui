@@ -1183,7 +1183,7 @@ border-radius:7px;</string>
         <rect>
          <x>330</x>
          <y>600</y>
-         <width>200</width>
+         <width>72</width>
          <height>50</height>
         </rect>
        </property>
@@ -1316,7 +1316,7 @@ font: 10pt &quot;华文隶书&quot;;
 border-radius:7px;</string>
        </property>
        <property name="text">
-        <string>管理页面</string>
+        <string>管理员信息</string>
        </property>
       </widget>
      </item>
@@ -1382,7 +1382,7 @@ font: 10pt &quot;华文隶书&quot;;
 border-radius:7px;</string>
        </property>
        <property name="text">
-        <string>主页</string>
+        <string>返回主页</string>
        </property>
       </widget>
      </item>

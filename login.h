@@ -7,6 +7,7 @@
 #include <QMessageBox> //数据库执行语句
 #include <QDebug>
 #include "mysql.h" //引入mysql函数
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE

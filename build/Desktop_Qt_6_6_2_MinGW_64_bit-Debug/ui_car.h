@@ -670,7 +670,7 @@ public:
         thread_camera_init->setMinimumSize(QSize(50, 50));
         comboBox = new QComboBox(camera_page);
         comboBox->setObjectName("comboBox");
-        comboBox->setGeometry(QRect(330, 600, 200, 50));
+        comboBox->setGeometry(QRect(330, 600, 72, 50));
         comboBox->setMinimumSize(QSize(0, 50));
         comboBox->setMaximumSize(QSize(200, 30));
         comboBox->setLayoutDirection(Qt::LeftToRight);
@@ -817,9 +817,9 @@ public:
         comboBox->setCurrentText(QString());
         camera_open_button->setText(QCoreApplication::translate("Car", "Open", nullptr));
         check_camera->setText(QCoreApplication::translate("Car", "\347\233\221\346\216\247", nullptr));
-        CtrolButton->setText(QCoreApplication::translate("Car", "\347\256\241\347\220\206\351\241\265\351\235\242", nullptr));
+        CtrolButton->setText(QCoreApplication::translate("Car", "\347\256\241\347\220\206\345\221\230\344\277\241\346\201\257", nullptr));
         messageButton->setText(QCoreApplication::translate("Car", "\350\275\246\350\276\206\344\277\241\346\201\257", nullptr));
-        MainButton->setText(QCoreApplication::translate("Car", "\344\270\273\351\241\265", nullptr));
+        MainButton->setText(QCoreApplication::translate("Car", "\350\277\224\345\233\236\344\270\273\351\241\265", nullptr));
     } // retranslateUi
 
 };

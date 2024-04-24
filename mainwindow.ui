@@ -101,7 +101,7 @@ padding:2px 4px;
 font: 10pt &quot;华文隶书&quot;;</string>
             </property>
             <property name="text">
-             <string/>
+             <string>admin123</string>
             </property>
             <property name="placeholderText">
              <string>请输入用户名</string>
@@ -153,7 +153,7 @@ padding:2px 4px;
 font: 10pt &quot;华文隶书&quot;;</string>
             </property>
             <property name="text">
-             <string/>
+             <string>123456</string>
             </property>
             <property name="echoMode">
              <enum>QLineEdit::Password</enum>
@@ -185,7 +185,7 @@ font: 10pt &quot;华文隶书&quot;;</string>
              <number>10</number>
             </property>
             <item row="0" column="0">
-             <widget class="QCheckBox" name="remeberBox">
+             <widget class="QCheckBox" name="remebermeBox">
               <property name="text">
                <string>记住我</string>
               </property>
