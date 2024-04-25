@@ -72,24 +72,19 @@ public:
     void SwitchPage();
     //检查输入的车牌号是否合规
     bool checkPlateNumber(QString);
-    //时间计费函数
-    // int fee_charge(QDateTime,QDateTime,QString);
+    //计费函数
+    int fee_charge(QDateTime, QDateTime, QString);
     //设置函数输出到Qtable widget中数据，传入参数数据库对象
-    // void print_widget(QSqlQuery q,int i);
+    void print_widget(QSqlQuery q,int i);
 
 signals:
-    // void starting(QSqlQuery q,QString name);
-    // void Camerathread_open_Signale();  //运行摄像头信号
+    void Camerathread_open_Signale();  // 开启摄像头的信号
     void Plate_start(Mat rgbImg);
-    // void Plate_Recognize(Mat rgbImg,QString plateStr); //通知EasyPR识别图片
     // 更新饼图
     void UpPieData(QString m_Parking_name,int m_reserve,int m_now_count_L);
     // 现有车辆-1/添加+1 调用 MySQl信号，对数据进行修改
     void now_count_dec_signal(); // 累减
     void now_count_acc_signal(); // 累加
-    // 到线程池中上传车牌信息
-    // void sendPlate_signal(mysql* mysql,QString license_plate,QString formattedDateTime,QString location);
-
 
 private slots:
 
@@ -99,29 +94,28 @@ private slots:
     //初始化停车场数据
     //初始化停车场数据
 
-    //点击用户管理页面
-    // void on_CtrolButton_clicked();
+    // 管理员页面
+    void on_CtrolButton_clicked();
     // //点击修改用户信息
-    // void on_ButtonModify_clicked();
+    void on_ButtonModify_clicked();
 
-    // void on_ButtonADD_clicked();
+    void on_ButtonADD_clicked(); // 添加管理员信息
 
-    // void on_ButtonDelete_clicked();
+    void on_ButtonDelete_clicked();
 
-    // void on_submitCar_clicked();
 
-    // void on_messageButton_clicked();
-    // 主页按钮点击
+    // 车辆信息
+    void on_carInforButton_clicked();
+    // 返回主页按钮点击
     void on_MainButton_clicked();
 
     //创建车位展示
     void park_num();
+    void on_submitCar_clicked(); // 车牌入库
+    void on_DeleteCar_clicked(); // 车牌出库
 
-    // void on_DeleteCar_clicked();
-
-    // void on_Carcheck_clicked();
-
-    // void on_Car_delete_clicked();
+    void on_Carcheck_clicked(); // 车辆信息查询
+    void on_Car_delete_clicked(); // 车辆信息删除
 
 
     //摄像头初始化
@@ -142,7 +136,7 @@ private slots:
     // void Slider_Changed();
     // void On_Position_Changed(qint64 position);
 
-    // void on_camera_take_clicked();
+    void on_camera_take_clicked(); // 画面捕捉，拍照槽函数
 
     void on_camera_button_clicked(); // 开启摄像头槽函数
 
@@ -152,7 +146,10 @@ private slots:
     // void updateImage(QImage);
 
 
-    // void on_check_camera_clicked();
+    void on_check_camera_clicked(); // 监控
+    void on_thread_camera_init_clicked(); // 监控-初始化
+    void on_thread_release_clicked();  // 监控-释放资源
+    void on_camera_open_button_clicked(); // 监控-开启当前摄像头
 
 protected:
     //当窗口大小发生变化调用此函数，重写此函数
@@ -169,12 +166,12 @@ private:
     // //音频文件对象
     QMediaPlayer *player;
     // //视频文件对象
-    QVideoWidget *videowidget; // 视频组件
+    QVideoWidget *videowidget; // 视频文件组件
     QVideoWidget *viewfinder; // 摄像头组件
-    // QString fileName;
+    QString fileName;
     // int pos;
     // //视频帧截屏
-    // QPixmap pixmap;
+    QPixmap pixmap;
     // //创建摄像头对象
     QCamera *camera;
     // //显示摄像头区域的指针
@@ -188,7 +185,7 @@ private:
     QWidget *centerWidget;
 
     //车牌识别
-    // easypr::CPlateRecognize m_plateRecognize;
+    easypr::CPlateRecognize m_plateRecognize;
     //饼图
     QChart *qchart;
     QPieSeries *series;

@@ -34,7 +34,7 @@ public:
 
     static int getCameraCount();
 signals:
-    void Camera_Image_signal(int id,const QImage &preview);
+    void Camera_Image_signal(int id, const QVideoFrame& frame);
 public slots:
 
     void CameraShow();
@@ -48,6 +48,6 @@ private:
     QMediaCaptureSession *captureSession;
     // QCameraImageCapture *imageCapture;
     QImageCapture *imageCapture;
-    bool camera_statue = false;
+    bool camera_status = false;
 };
 #endif // CAMERASTHREAD_H

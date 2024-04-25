@@ -1,9 +1,12 @@
-#include "login.h"
-#include <QSqlDatabase>
+
 #include <QApplication>
-#include "init.h"
-#include <opencv2/opencv.hpp>
 #include <QCoreApplication>
+#include <opencv2/opencv.hpp>
+#include <QSqlDatabase>
+
+#include "login.h"
+#include "init.h"
+#include "car.h"
 
 int main(int argc, char *argv[])
 {
@@ -23,13 +26,20 @@ int main(int argc, char *argv[])
     }
     else
     {
-        //文件存在启动主程序
-        qDebug()<<"打开登录页11111";
-        MainWindow *w = new MainWindow;
-        w->show();
+        bool login_status = true;
+        if (login_status) { // 已登录
+            // 进入主页面
+            Car *w = new Car();
+            w->show();
+        }
+        // 进入登录页
+        else {
+            qDebug()<<"打开登录页11111";
+            MainWindow *w = new MainWindow;
+            w->show();
+            w->setAttribute(Qt::WA_DeleteOnClose);
+        }
         file.close();
-        w->setAttribute(Qt::WA_DeleteOnClose);
-
     }
     return a.exec();
 }

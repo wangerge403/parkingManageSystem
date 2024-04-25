@@ -22,10 +22,10 @@ Camera::Camera(int number)
         camera->start();
 
         // 更新状态标志
-        camera_statue = true;
+        camera_status = true;
     } else {
         qDebug() << "Camera not found or index out of bounds.";
-        camera_statue = false;
+        camera_status = false;
     }
 }
 
@@ -49,30 +49,30 @@ int Camera::getCameraCount()
 
 void Camera::CameraShow()
 {
-    // //信号槽
-    // /*QCameraImageCapture::imageCaptured(int id, const QImage &preview)
-    //   Signal emitted when the frame with request id was captured, but not processed and saved yet. Frame preview can be displayed to user.
-    //  *
-    //  * */
-    // connect(imageCapture,&QCameraImageCapture::imageCaptured,this,[=](int id,const QImage &preview)
-    //         {
-    //             qDebug()<<"图片传出";
-    //             emit Camera_Image_signal(id,preview);
+    //信号槽
+    /*QCameraImageCapture::imageCaptured(int id, const QImage &preview)
+      Signal emitted when the frame with request id was captured, but not processed and saved yet. Frame preview can be displayed to user.
+     *
+     * */
+    connect(imageCapture, &QImageCapture::imageAvailable, this, [=](int id, const QVideoFrame& frame)
+        {
+            qDebug()<<"图片传出";
+            emit Camera_Image_signal(id, frame);
 
-    //         });
-    // //进入图片子线程
-    // qDebug()<<"进入图片子线程";
-    // while(camera_statue)
-    // {
+        });
+    //进入图片子线程
+    qDebug()<<"进入图片子线程";
+    while(camera_status)
+    {
 
-    //     if(camera->status() == QCamera::ActiveStatus)
-    //     {
-    //         //抓取图片
-    //         qDebug()<<"开始抓取图片";
-    //         imageCapture->capture();
-    //         //使用信号槽
-    //     }
-    //     QThread::msleep(1000); //线程休眠100毫秒
-    // }
+        if(camera->isActive())
+        {
+            //抓取图片
+            qDebug()<<"开始抓取图片";
+            imageCapture->capture();
+            //使用信号槽
+        }
+        QThread::msleep(1000); //线程休眠100毫秒
+    }
 
 }

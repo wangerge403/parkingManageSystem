@@ -9,14 +9,14 @@ PlateRecognize::PlateRecognize(QObject *parent) : QObject(parent)
     // 1. 加载车牌识别模型 -不加载，识别准确率超低
     //车牌识别部分，加入线程
     CPlateRecognize pr;
-    pr.LoadSVM("F://parkingManageSystem//trainModel//svm_hist.xml");
+    pr.LoadSVM("F://QtProject//parkingManageSystem//trainModel//svm_hist.xml");
 
-    pr.LoadANN("F://parkingManageSystem//trainModel//ann.xml");
+    pr.LoadANN("F://QtProject//parkingManageSystem//trainModel//ann.xml");
 
-    pr.LoadChineseANN("F://parkingManageSystem//trainModel//ann_chinese.xml");
+    pr.LoadChineseANN("F://QtProject//parkingManageSystem//trainModel//ann_chinese.xml");
     // new in v1.6
-    pr.LoadGrayChANN("F://parkingManageSystem//trainModel//annCh.xml");
-    pr.LoadChineseMapping("F://parkingManageSystem//trainModel//province_mapping");
+    pr.LoadGrayChANN("F://QtProject//parkingManageSystem//trainModel//annCh.xml");
+    pr.LoadChineseMapping("F://QtProject//parkingManageSystem//trainModel//province_mapping");
 }
 
 

@@ -113,7 +113,7 @@ public:
     QSpacerItem *verticalSpacer_10;
     QPushButton *CtrolButton;
     QSpacerItem *verticalSpacer_6;
-    QPushButton *messageButton;
+    QPushButton *carInforButton;
     QSpacerItem *verticalSpacer_7;
     QPushButton *MainButton;
     QSpacerItem *verticalSpacer_8;
@@ -723,16 +723,16 @@ public:
 
         verticalLayout->addItem(verticalSpacer_6);
 
-        messageButton = new QPushButton(Car);
-        messageButton->setObjectName("messageButton");
-        messageButton->setMinimumSize(QSize(0, 45));
-        messageButton->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);\n"
+        carInforButton = new QPushButton(Car);
+        carInforButton->setObjectName("carInforButton");
+        carInforButton->setMinimumSize(QSize(0, 45));
+        carInforButton->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 25 9pt \"Bahnschrift Light\";\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
 "border-radius:7px;"));
 
-        verticalLayout->addWidget(messageButton);
+        verticalLayout->addWidget(carInforButton);
 
         verticalSpacer_7 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
@@ -759,7 +759,7 @@ public:
 
         retranslateUi(Car);
 
-        stack->setCurrentIndex(0);
+        stack->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(Car);
@@ -818,7 +818,7 @@ public:
         camera_open_button->setText(QCoreApplication::translate("Car", "Open", nullptr));
         check_camera->setText(QCoreApplication::translate("Car", "\347\233\221\346\216\247", nullptr));
         CtrolButton->setText(QCoreApplication::translate("Car", "\347\256\241\347\220\206\345\221\230\344\277\241\346\201\257", nullptr));
-        messageButton->setText(QCoreApplication::translate("Car", "\350\275\246\350\276\206\344\277\241\346\201\257", nullptr));
+        carInforButton->setText(QCoreApplication::translate("Car", "\350\275\246\350\276\206\344\277\241\346\201\257", nullptr));
         MainButton->setText(QCoreApplication::translate("Car", "\350\277\224\345\233\236\344\270\273\351\241\265", nullptr));
     } // retranslateUi
 
