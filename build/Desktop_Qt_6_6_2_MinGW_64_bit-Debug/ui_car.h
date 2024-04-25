@@ -37,20 +37,10 @@ public:
     QWidget *main;
     QHBoxLayout *horizontalLayout_5;
     QGridLayout *gridLayout;
-    QVBoxLayout *verticalLayout_5;
-    QSlider *horizontalSlider;
-    QHBoxLayout *horizontalLayout_2;
-    QPushButton *fileopen;
-    QLabel *screen_label;
-    QPushButton *camera_button;
-    QHBoxLayout *horizontalLayout_3;
-    QPushButton *video_pause;
-    QPushButton *camera_take;
-    QPushButton *video_start;
+    QLabel *label_pie;
     QVBoxLayout *verticalLayout_4;
-    QSpacerItem *horizontalSpacer;
     QLabel *label_title;
-    QSpacerItem *horizontalSpacer_2;
+    QLabel *screen_label;
     QHBoxLayout *horizontalLayout;
     QVBoxLayout *verticalLayout_2;
     QLineEdit *Car_idinput;
@@ -58,8 +48,17 @@ public:
     QVBoxLayout *verticalLayout_3;
     QLineEdit *Car_output;
     QPushButton *DeleteCar;
-    QLabel *label_pie;
     QLabel *camera;
+    QVBoxLayout *verticalLayout_5;
+    QSlider *horizontalSlider;
+    QHBoxLayout *horizontalLayout_2;
+    QPushButton *selectImgButton;
+    QPushButton *fileopen;
+    QPushButton *camera_button;
+    QHBoxLayout *horizontalLayout_3;
+    QPushButton *video_pause;
+    QPushButton *camera_take;
+    QPushButton *video_start;
     QLabel *park_all;
     QLabel *park_now;
     QLabel *park_reserve;
@@ -108,6 +107,7 @@ public:
     QComboBox *comboBox;
     QPushButton *camera_open_button;
     QVBoxLayout *verticalLayout;
+    QPushButton *datetime;
     QSpacerItem *verticalSpacer_9;
     QPushButton *check_camera;
     QSpacerItem *verticalSpacer_10;
@@ -137,6 +137,109 @@ public:
         horizontalLayout_5->setObjectName("horizontalLayout_5");
         gridLayout = new QGridLayout();
         gridLayout->setObjectName("gridLayout");
+        label_pie = new QLabel(main);
+        label_pie->setObjectName("label_pie");
+        label_pie->setMinimumSize(QSize(0, 350));
+        label_pie->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+
+        gridLayout->addWidget(label_pie, 1, 1, 1, 1);
+
+        verticalLayout_4 = new QVBoxLayout();
+        verticalLayout_4->setObjectName("verticalLayout_4");
+        verticalLayout_4->setContentsMargins(20, 10, -1, 15);
+        label_title = new QLabel(main);
+        label_title->setObjectName("label_title");
+        label_title->setMaximumSize(QSize(16777215, 45));
+        label_title->setStyleSheet(QString::fromUtf8("font: 13pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
+
+        verticalLayout_4->addWidget(label_title);
+
+        screen_label = new QLabel(main);
+        screen_label->setObjectName("screen_label");
+
+        verticalLayout_4->addWidget(screen_label);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName("horizontalLayout");
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setSpacing(15);
+        verticalLayout_2->setObjectName("verticalLayout_2");
+        verticalLayout_2->setContentsMargins(0, 0, -1, -1);
+        Car_idinput = new QLineEdit(main);
+        Car_idinput->setObjectName("Car_idinput");
+        Car_idinput->setMinimumSize(QSize(0, 55));
+        Car_idinput->setMaximumSize(QSize(16777215, 45));
+        Car_idinput->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
+"border:1px groove transparent;\n"
+"border-radius:7px;\n"
+"padding:2px 4px;\n"
+"font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
+
+        verticalLayout_2->addWidget(Car_idinput);
+
+        submitCar = new QPushButton(main);
+        submitCar->setObjectName("submitCar");
+        submitCar->setMinimumSize(QSize(0, 45));
+        submitCar->setMaximumSize(QSize(16777215, 45));
+        submitCar->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
+"color: rgb(255, 255, 255);\n"
+"font: 25 9pt \"Bahnschrift Light\";\n"
+"font: 12pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
+"border-radius:8px;"));
+
+        verticalLayout_2->addWidget(submitCar);
+
+
+        horizontalLayout->addLayout(verticalLayout_2);
+
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setSpacing(15);
+        verticalLayout_3->setObjectName("verticalLayout_3");
+        verticalLayout_3->setContentsMargins(-1, 0, -1, -1);
+        Car_output = new QLineEdit(main);
+        Car_output->setObjectName("Car_output");
+        Car_output->setMinimumSize(QSize(0, 55));
+        Car_output->setMaximumSize(QSize(16777215, 45));
+        Car_output->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
+"border:1px groove transparent;\n"
+"border-radius:7px;\n"
+"padding:2px 4px;\n"
+"font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
+
+        verticalLayout_3->addWidget(Car_output);
+
+        DeleteCar = new QPushButton(main);
+        DeleteCar->setObjectName("DeleteCar");
+        DeleteCar->setMinimumSize(QSize(0, 45));
+        DeleteCar->setMaximumSize(QSize(16777215, 45));
+        DeleteCar->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
+"color: rgb(255, 255, 255);\n"
+"font: 25 9pt \"Bahnschrift Light\";\n"
+"font: 12pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
+"border-radius:8px;"));
+
+        verticalLayout_3->addWidget(DeleteCar);
+
+
+        horizontalLayout->addLayout(verticalLayout_3);
+
+
+        verticalLayout_4->addLayout(horizontalLayout);
+
+
+        gridLayout->addLayout(verticalLayout_4, 2, 1, 1, 1);
+
+        camera = new QLabel(main);
+        camera->setObjectName("camera");
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Minimum);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(camera->sizePolicy().hasHeightForWidth());
+        camera->setSizePolicy(sizePolicy);
+        camera->setMinimumSize(QSize(500, 250));
+
+        gridLayout->addWidget(camera, 1, 0, 1, 1);
+
         verticalLayout_5 = new QVBoxLayout();
         verticalLayout_5->setObjectName("verticalLayout_5");
         horizontalSlider = new QSlider(main);
@@ -177,32 +280,40 @@ public:
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
-        fileopen = new QPushButton(main);
-        fileopen->setObjectName("fileopen");
-        fileopen->setMinimumSize(QSize(0, 45));
-        fileopen->setMaximumSize(QSize(16777215, 45));
-        fileopen->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);\n"
+        selectImgButton = new QPushButton(main);
+        selectImgButton->setObjectName("selectImgButton");
+        selectImgButton->setMinimumSize(QSize(0, 45));
+        selectImgButton->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 25 9pt \"Bahnschrift Light\";\n"
-"font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
-"border-radius:7px;"));
+"font: 12pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
+"border-radius:8px;"));
+        selectImgButton->setAutoRepeat(false);
+
+        horizontalLayout_2->addWidget(selectImgButton);
+
+        fileopen = new QPushButton(main);
+        fileopen->setObjectName("fileopen");
+        fileopen->setEnabled(true);
+        fileopen->setMinimumSize(QSize(0, 45));
+        fileopen->setMaximumSize(QSize(16777215, 45));
+        fileopen->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
+"color: rgb(255, 255, 255);\n"
+"font: 25 9pt \"Bahnschrift Light\";\n"
+"font: 12pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
+"border-radius:8px;"));
 
         horizontalLayout_2->addWidget(fileopen);
-
-        screen_label = new QLabel(main);
-        screen_label->setObjectName("screen_label");
-
-        horizontalLayout_2->addWidget(screen_label);
 
         camera_button = new QPushButton(main);
         camera_button->setObjectName("camera_button");
         camera_button->setMinimumSize(QSize(0, 45));
         camera_button->setMaximumSize(QSize(16777215, 45));
-        camera_button->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);\n"
+        camera_button->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 25 9pt \"Bahnschrift Light\";\n"
-"font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
-"border-radius:7px;"));
+"font: 12pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
+"border-radius:8px;"));
 
         horizontalLayout_2->addWidget(camera_button);
 
@@ -215,12 +326,11 @@ public:
         video_pause = new QPushButton(main);
         video_pause->setObjectName("video_pause");
         video_pause->setMinimumSize(QSize(0, 45));
-        video_pause->setMaximumSize(QSize(16777215, 45));
-        video_pause->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);\n"
+        video_pause->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 25 9pt \"Bahnschrift Light\";\n"
-"font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
-"border-radius:7px;"));
+"font: 12pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
+"border-radius:8px;"));
 
         horizontalLayout_3->addWidget(video_pause);
 
@@ -228,11 +338,11 @@ public:
         camera_take->setObjectName("camera_take");
         camera_take->setMinimumSize(QSize(0, 45));
         camera_take->setMaximumSize(QSize(16777215, 45));
-        camera_take->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);\n"
+        camera_take->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 25 9pt \"Bahnschrift Light\";\n"
-"font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
-"border-radius:7px;"));
+"font: 12pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
+"border-radius:8px;"));
 
         horizontalLayout_3->addWidget(camera_take);
 
@@ -240,11 +350,11 @@ public:
         video_start->setObjectName("video_start");
         video_start->setMinimumSize(QSize(0, 45));
         video_start->setMaximumSize(QSize(16777215, 45));
-        video_start->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);\n"
+        video_start->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 25 9pt \"Bahnschrift Light\";\n"
-"font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
-"border-radius:7px;"));
+"font: 12pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
+"border-radius:8px;"));
 
         horizontalLayout_3->addWidget(video_start);
 
@@ -252,111 +362,7 @@ public:
         verticalLayout_5->addLayout(horizontalLayout_3);
 
 
-        gridLayout->addLayout(verticalLayout_5, 1, 0, 1, 1);
-
-        verticalLayout_4 = new QVBoxLayout();
-        verticalLayout_4->setObjectName("verticalLayout_4");
-        verticalLayout_4->setContentsMargins(-1, 39, -1, 60);
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        verticalLayout_4->addItem(horizontalSpacer);
-
-        label_title = new QLabel(main);
-        label_title->setObjectName("label_title");
-        label_title->setMaximumSize(QSize(16777215, 45));
-        label_title->setStyleSheet(QString::fromUtf8("font: 13pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
-
-        verticalLayout_4->addWidget(label_title);
-
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        verticalLayout_4->addItem(horizontalSpacer_2);
-
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName("horizontalLayout");
-        verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setObjectName("verticalLayout_2");
-        verticalLayout_2->setContentsMargins(-1, 19, -1, -1);
-        Car_idinput = new QLineEdit(main);
-        Car_idinput->setObjectName("Car_idinput");
-        Car_idinput->setMinimumSize(QSize(0, 55));
-        Car_idinput->setMaximumSize(QSize(16777215, 45));
-        Car_idinput->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
-"border:1px groove gray;\n"
-"border-radius:7px;\n"
-"padding:2px 4px;\n"
-"font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
-
-        verticalLayout_2->addWidget(Car_idinput);
-
-        submitCar = new QPushButton(main);
-        submitCar->setObjectName("submitCar");
-        submitCar->setMinimumSize(QSize(0, 45));
-        submitCar->setMaximumSize(QSize(16777215, 45));
-        submitCar->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);\n"
-"color: rgb(255, 255, 255);\n"
-"font: 25 9pt \"Bahnschrift Light\";\n"
-"font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
-"border-radius:7px;"));
-
-        verticalLayout_2->addWidget(submitCar);
-
-
-        horizontalLayout->addLayout(verticalLayout_2);
-
-        verticalLayout_3 = new QVBoxLayout();
-        verticalLayout_3->setObjectName("verticalLayout_3");
-        verticalLayout_3->setContentsMargins(-1, 18, -1, -1);
-        Car_output = new QLineEdit(main);
-        Car_output->setObjectName("Car_output");
-        Car_output->setMinimumSize(QSize(0, 55));
-        Car_output->setMaximumSize(QSize(16777215, 45));
-        Car_output->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
-"border:1px groove gray;\n"
-"border-radius:7px;\n"
-"padding:2px 4px;\n"
-"font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
-
-        verticalLayout_3->addWidget(Car_output);
-
-        DeleteCar = new QPushButton(main);
-        DeleteCar->setObjectName("DeleteCar");
-        DeleteCar->setMinimumSize(QSize(0, 45));
-        DeleteCar->setMaximumSize(QSize(16777215, 45));
-        DeleteCar->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);\n"
-"color: rgb(255, 255, 255);\n"
-"font: 25 9pt \"Bahnschrift Light\";\n"
-"font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
-"border-radius:7px;"));
-
-        verticalLayout_3->addWidget(DeleteCar);
-
-
-        horizontalLayout->addLayout(verticalLayout_3);
-
-
-        verticalLayout_4->addLayout(horizontalLayout);
-
-
-        gridLayout->addLayout(verticalLayout_4, 1, 1, 1, 1);
-
-        label_pie = new QLabel(main);
-        label_pie->setObjectName("label_pie");
-        label_pie->setMinimumSize(QSize(0, 350));
-        label_pie->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-
-        gridLayout->addWidget(label_pie, 0, 1, 1, 1);
-
-        camera = new QLabel(main);
-        camera->setObjectName("camera");
-        QSizePolicy sizePolicy(QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Minimum);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(camera->sizePolicy().hasHeightForWidth());
-        camera->setSizePolicy(sizePolicy);
-        camera->setMinimumSize(QSize(500, 250));
-
-        gridLayout->addWidget(camera, 0, 0, 1, 1);
+        gridLayout->addLayout(verticalLayout_5, 2, 0, 1, 1);
 
 
         horizontalLayout_5->addLayout(gridLayout);
@@ -686,8 +692,19 @@ public:
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName("verticalLayout");
-        verticalLayout->setContentsMargins(-1, -1, 10, -1);
-        verticalSpacer_9 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+        verticalLayout->setContentsMargins(-1, 20, 10, -1);
+        datetime = new QPushButton(Car);
+        datetime->setObjectName("datetime");
+        datetime->setMinimumSize(QSize(50, 50));
+        datetime->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 169, 30, 0.7);\n"
+"color: rgb(255, 255, 255);\n"
+"font: 25 9pt \"Bahnschrift Light\";\n"
+"font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
+"border-radius:25px;"));
+
+        verticalLayout->addWidget(datetime);
+
+        verticalSpacer_9 = new QSpacerItem(20, 20, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Fixed);
 
         verticalLayout->addItem(verticalSpacer_9);
 
@@ -695,11 +712,11 @@ public:
         check_camera->setObjectName("check_camera");
         check_camera->setMinimumSize(QSize(150, 45));
         check_camera->setMaximumSize(QSize(150, 45));
-        check_camera->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);\n"
+        check_camera->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 25 9pt \"Bahnschrift Light\";\n"
-"font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
-"border-radius:7px;"));
+"font: 12pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
+"border-radius:8px;"));
 
         verticalLayout->addWidget(check_camera);
 
@@ -711,11 +728,11 @@ public:
         CtrolButton->setObjectName("CtrolButton");
         CtrolButton->setMinimumSize(QSize(0, 45));
         CtrolButton->setMaximumSize(QSize(150, 150));
-        CtrolButton->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);\n"
+        CtrolButton->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 25 9pt \"Bahnschrift Light\";\n"
-"font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
-"border-radius:7px;"));
+"font: 12pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
+"border-radius:8px;"));
 
         verticalLayout->addWidget(CtrolButton);
 
@@ -726,11 +743,11 @@ public:
         carInforButton = new QPushButton(Car);
         carInforButton->setObjectName("carInforButton");
         carInforButton->setMinimumSize(QSize(0, 45));
-        carInforButton->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);\n"
+        carInforButton->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 25 9pt \"Bahnschrift Light\";\n"
-"font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
-"border-radius:7px;"));
+"font: 12pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
+"border-radius:8px;"));
 
         verticalLayout->addWidget(carInforButton);
 
@@ -741,11 +758,11 @@ public:
         MainButton = new QPushButton(Car);
         MainButton->setObjectName("MainButton");
         MainButton->setMinimumSize(QSize(0, 45));
-        MainButton->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);\n"
+        MainButton->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 25 9pt \"Bahnschrift Light\";\n"
-"font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
-"border-radius:7px;"));
+"font: 12pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
+"border-radius:8px;"));
 
         verticalLayout->addWidget(MainButton);
 
@@ -759,7 +776,7 @@ public:
 
         retranslateUi(Car);
 
-        stack->setCurrentIndex(3);
+        stack->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(Car);
@@ -768,19 +785,20 @@ public:
     void retranslateUi(QWidget *Car)
     {
         Car->setWindowTitle(QCoreApplication::translate("Car", "Form", nullptr));
-        fileopen->setText(QCoreApplication::translate("Car", "\350\247\206\351\242\221", nullptr));
+        label_pie->setText(QString());
+        label_title->setText(QCoreApplication::translate("Car", "\350\257\206\345\210\253\347\273\223\346\236\234\357\274\232", nullptr));
         screen_label->setText(QString());
-        camera_button->setText(QCoreApplication::translate("Car", "\346\221\204\345\203\217\345\244\264", nullptr));
-        video_pause->setText(QCoreApplication::translate("Car", "\346\232\202\345\201\234", nullptr));
-        camera_take->setText(QCoreApplication::translate("Car", "\346\210\252\345\217\226\347\205\247\347\211\207", nullptr));
-        video_start->setText(QCoreApplication::translate("Car", "\346\222\255\346\224\276", nullptr));
-        label_title->setText(QCoreApplication::translate("Car", "\350\257\206\345\210\253\347\232\204\350\275\246\347\211\214\345\217\267", nullptr));
         Car_idinput->setPlaceholderText(QCoreApplication::translate("Car", "\345\205\245\345\272\223\350\275\246\347\211\214\345\217\267", nullptr));
         submitCar->setText(QCoreApplication::translate("Car", "\345\205\245\345\272\223", nullptr));
         Car_output->setPlaceholderText(QCoreApplication::translate("Car", "\345\207\272\345\272\223\350\275\246\347\211\214\345\217\267", nullptr));
         DeleteCar->setText(QCoreApplication::translate("Car", "\345\207\272\345\272\223", nullptr));
-        label_pie->setText(QString());
         camera->setText(QString());
+        selectImgButton->setText(QCoreApplication::translate("Car", "\351\200\211\346\213\251\345\233\276\347\211\207", nullptr));
+        fileopen->setText(QCoreApplication::translate("Car", "\346\267\273\345\212\240\350\247\206\351\242\221", nullptr));
+        camera_button->setText(QCoreApplication::translate("Car", "\346\221\204\345\203\217\345\244\264", nullptr));
+        video_pause->setText(QCoreApplication::translate("Car", "\346\232\202\345\201\234", nullptr));
+        camera_take->setText(QCoreApplication::translate("Car", "\346\210\252\345\217\226\347\205\247\347\211\207", nullptr));
+        video_start->setText(QCoreApplication::translate("Car", "\346\222\255\346\224\276", nullptr));
         park_all->setText(QString());
         park_now->setText(QString());
         park_reserve->setText(QString());
@@ -816,7 +834,8 @@ public:
         thread_camera_init->setText(QCoreApplication::translate("Car", "\345\210\235\345\247\213\345\214\226", nullptr));
         comboBox->setCurrentText(QString());
         camera_open_button->setText(QCoreApplication::translate("Car", "Open", nullptr));
-        check_camera->setText(QCoreApplication::translate("Car", "\347\233\221\346\216\247", nullptr));
+        datetime->setText(QString());
+        check_camera->setText(QCoreApplication::translate("Car", "\346\221\204\345\203\217\345\244\264\345\210\227\350\241\250", nullptr));
         CtrolButton->setText(QCoreApplication::translate("Car", "\347\256\241\347\220\206\345\221\230\344\277\241\346\201\257", nullptr));
         carInforButton->setText(QCoreApplication::translate("Car", "\350\275\246\350\276\206\344\277\241\346\201\257", nullptr));
         MainButton->setText(QCoreApplication::translate("Car", "\350\277\224\345\233\236\344\270\273\351\241\265", nullptr));

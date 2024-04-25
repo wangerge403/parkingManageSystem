@@ -1,9 +1,10 @@
 #include "car.h"
 #include "ui_car.h"
-#include <login.h> //引用登录函数的初始化数据库
+#include "login.h" //导入登录的初始化数据库
 #include "QFileDialog"
 #include <QDebug>
 #include "dbthreadPool.h"
+#include <QDateTime>
 
 Car::Car(QWidget *parent) :
     QWidget(parent),
@@ -13,6 +14,11 @@ Car::Car(QWidget *parent) :
     qDebug()<<"进入停车场主页";
     setWindowTitle("停车场管理系统");
     mysql_C = new mysql;
+
+    // 显示系统时间
+    QTimer *timer2 = new QTimer(this);  // 创建一个定时器
+    connect(timer2, &QTimer::timeout, this, &Car::updateTime);
+    timer2->start(1000);  // 每隔1000毫秒触发一次 timeout 信号，即每秒更新一次
 
     //3. 播放视频初始化
     // video_Init();
@@ -179,7 +185,7 @@ void Car::create_pie(int reserve)
     series->append("预约数", reserve);
     series->append("入库数", now)->setColor("#FFA500");
     series->append("剩余数", surplus);
-    series->setHoleSize(0.3); //设置中间 空洞大小
+    series->setHoleSize(0.3); //设置半径
     series->pieSize();
 
     //为每个分块设置标签文字
@@ -243,7 +249,8 @@ void Car::camera_Init()
         // 创建一个视频显示组件
         viewfinder = new QVideoWidget(ui->camera); // 假设 ui->camera 是放置 QVideoWidget 的 QWidget
         viewfinder->setAspectRatioMode(Qt::IgnoreAspectRatio);
-        viewfinder->setGeometry(10, 10, 500, 350);
+        ui->camera->setAlignment(Qt::AlignCenter);
+        viewfinder->setGeometry(10, 40, 500, 300);
 
         // 创建媒体捕获会话并设置视窗设备
         captureSession = new QMediaCaptureSession(this);
@@ -254,7 +261,6 @@ void Car::camera_Init()
         imageCapture = new QImageCapture(captureSession);
 
         viewfinder->show(); // 显示视图窗口
-        camera->start(); // 开始捕获
     }
 }
 
@@ -552,20 +558,19 @@ void Car::on_ButtonADD_clicked()
     }
 }
 
-//当点击用户控制页面的时候，
-//初始化数据，如果连接成功然后将将数据库内部的用户信息呈现到tableCtrol内部
+// 刷新列表
+// 初始化数据，如果连接成功
+// 回显数据
 void Car::on_CtrolButton_clicked()
 {
     timer->stop();
-    //判断摄像头和视频，如果视频暂停，隐藏，如果摄像头，隐藏即可
-    // if (camera->isActive() ||
-    //     player->playbackState() == QMediaPlayer::PlaybackState::PlayingState ||
-    //     player->playbackState() == QMediaPlayer::PlaybackState::PausedState)
-    // {
-    //     player->stop(); // 停止播放文件
-    //     // videowidget->setVisible(false); // 隐藏文件播放的 QVideoWidget 暂时不加
-    //     viewfinder->setVisible(false); // 隐藏摄像头显示区域
-    // }
+    //判断摄像头状态
+    if (camera->isActive())
+    {
+        // player->stop(); // 停止播放文件
+        // videowidget->setVisible(false); // 隐藏视频文件
+        viewfinder->setVisible(false); // 隐藏摄像头显示区域
+    }
 
     //初始化数据连接
     ui->tablectrol->size();//设置表格
@@ -613,8 +618,9 @@ void Car::on_CtrolButton_clicked()
 }
 
 // （2）.修改管理员信息
-//获取当前用户鼠标太Table WIdget所在的行
-//并获取用户在哪一行做出修改，然后根据用户ID更新用户信息
+// 获取当前用户鼠标太Table WIdget所在的行
+// 哪一行在修改
+// 根据用户ID更新用户信息
 void Car::on_ButtonModify_clicked()
 {
     //读取当前鼠标所在的行
@@ -955,8 +961,6 @@ void Car::on_check_camera_clicked()  //打开右侧监控按钮
    viewfinder->setAspectRatioMode(Qt::IgnoreAspectRatio); //设置宽高比为自由调整
    //viemfinder->resize(500,250);
    viewfinder->setGeometry(10, 10, 500, 250);
-
-    // Todo离开后释放资源
 }
 
 // 监控-初始化
@@ -1000,4 +1004,14 @@ void Car::on_camera_open_button_clicked()
        ui->camera_open_button->setText("Open");
 
    }
+}
+
+// 获取系统时间
+void Car::updateTime()
+{
+    QDateTime now = QDateTime::currentDateTime();  // 获取当前的日期和时间
+    QString formattedTime = now.toString("yyyy-MM-dd HH:mm:ss");  // 将日期和时间格式化为字符串
+
+    // 显示的文本为当前时间
+    ui->datetime->setText(formattedTime);
 }

@@ -26,19 +26,19 @@ int main(int argc, char *argv[])
     }
     else
     {
-        bool login_status = true;
-        if (login_status) { // 已登录
-            // 进入主页面
-            Car *w = new Car();
-            w->show();
-        }
+        // bool login_status = true;
+        // if (login_status) { // 已登录
+        //     // 进入主页面
+        //     Car *w = new Car();
+        //     w->show();
+        // }
         // 进入登录页
-        else {
+        // else {
             qDebug()<<"打开登录页11111";
             MainWindow *w = new MainWindow;
             w->show();
             w->setAttribute(Qt::WA_DeleteOnClose);
-        }
+        // }
         file.close();
     }
     return a.exec();

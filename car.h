@@ -76,6 +76,7 @@ public:
     int fee_charge(QDateTime, QDateTime, QString);
     //设置函数输出到Qtable widget中数据，传入参数数据库对象
     void print_widget(QSqlQuery q,int i);
+    void updateTime(); // 获取系统时间
 
 signals:
     void Camerathread_open_Signale();  // 开启摄像头的信号
