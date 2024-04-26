@@ -28,30 +28,18 @@ MainWindow::MainWindow(QWidget *parent)
 
 
 
-    //设置登陆页面左边背景图
+    // 设置登陆页面左边logo
     // 创建QPixmap对象，加载png图像存储到pix变量中，使用new关键字分配堆内存来储存该对象
-    QPixmap *pix = new QPixmap(":/images/hello.jpg");
+    QPixmap *pix = new QPixmap(":/icon/images/parking.png");
     QSize sz = ui->label_image->size();
     ui->label_image->setPixmap(pix->scaled(sz));
 
-    //设置图片阴影效果
-    //QGraphicsDropShadowEffect对象添加阴影效果，
-    QGraphicsDropShadowEffect *shadow = new QGraphicsDropShadowEffect(this);
-    //设置阴影效果的偏移量，并不在垂直方向发生任何偏移
-    shadow->setOffset(-3,0);
-    //设置阴影的颜色
-    QColor color(227, 180, 184);
-    shadow->setColor(color);
-    // 设置模糊半径，数值越大，阴影边缘越模糊
-    shadow->setBlurRadius(30);
-    ui->label_image->setGraphicsEffect(shadow);
     connect(ui->lineEdit_password, &QLineEdit::returnPressed, ui->pushButton_2, &QPushButton::click);
 
 }
 
 MainWindow::~MainWindow()
 {
-//    qDebug()<<"关闭了数据库";
 //    mysql_c.mysql_close(); //关闭窗口则私房数据库连接
     delete ui;
 

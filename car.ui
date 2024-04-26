@@ -35,7 +35,7 @@
       <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="main">
       <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -473,19 +473,6 @@ border-radius:8px;</string>
      </widget>
      <widget class="QWidget" name="message">
       <layout class="QGridLayout" name="gridLayout_2">
-       <item row="1" column="2">
-        <spacer name="horizontalSpacer_9">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
        <item row="1" column="0">
         <spacer name="horizontalSpacer_3">
          <property name="orientation">
@@ -502,42 +489,6 @@ border-radius:8px;</string>
        <item row="0" column="1">
         <layout class="QHBoxLayout" name="horizontalLayout_6">
          <item>
-          <spacer name="horizontalSpacer_4">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QLabel" name="labelCar">
-           <property name="styleSheet">
-            <string notr="true">font: 17pt &quot;华文隶书&quot;;</string>
-           </property>
-           <property name="text">
-            <string>车库信息系统</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_5">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
           <widget class="QLineEdit" name="find_lineEdit">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -553,7 +504,7 @@ border-radius:8px;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(247, 247, 247);
-border:1px groove gray;
+border:1px groove transparent;
 border-radius:7px;
 padding:2px 4px;
 font: 10pt &quot;华文隶书&quot;;</string>
@@ -576,7 +527,7 @@ font: 10pt &quot;华文隶书&quot;;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(247, 247, 247);
-border:1px groove gray;
+border:1px groove transparent;
 border-radius:7px;
 padding:2px 4px;
 font: 10pt &quot;华文隶书&quot;;</string>
@@ -610,7 +561,7 @@ font: 10pt &quot;华文隶书&quot;;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(247, 247, 247);
-border:1px groove gray;
+border:1px groove transparent;
 border-radius:7px;
 padding:2px 4px;
 font: 10pt &quot;华文隶书&quot;;</string>
@@ -649,11 +600,11 @@ font: 10pt &quot;华文隶书&quot;;</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(0, 170, 127);
+            <string notr="true">background-color: rgb(0, 170, 255);
 color: rgb(255, 255, 255);
 font: 25 9pt &quot;Bahnschrift Light&quot;;
 font: 10pt &quot;华文隶书&quot;;
-border-radius:7px;</string>
+border-radius:8px;</string>
            </property>
            <property name="text">
             <string>查询</string>
@@ -688,7 +639,7 @@ border-radius:7px;</string>
             <number>-3</number>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(0, 170, 127);
+            <string notr="true">background-color:rgb(255, 0, 0);
 color: rgb(255, 255, 255);
 font: 25 9pt &quot;Bahnschrift Light&quot;;
 font: 10pt &quot;华文隶书&quot;;
@@ -714,7 +665,33 @@ border-radius:7px;</string>
          </item>
         </layout>
        </item>
-       <item row="1" column="1">
+       <item row="7" column="1">
+        <spacer name="verticalSpacer_12">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="2">
+        <spacer name="horizontalSpacer_9">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="8" column="1">
         <widget class="QTableWidget" name="tableCar">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -760,18 +737,15 @@ border: none;</string>
          <column/>
         </widget>
        </item>
-       <item row="2" column="1">
-        <spacer name="verticalSpacer_12">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelCar">
+         <property name="styleSheet">
+          <string notr="true">font: 17pt &quot;华文隶书&quot;;</string>
          </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
+         <property name="text">
+          <string>&gt;&gt;车辆信息</string>
          </property>
-        </spacer>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -779,18 +753,18 @@ border: none;</string>
       <layout class="QVBoxLayout" name="verticalLayout_9">
        <item>
         <layout class="QGridLayout" name="gridLayout_3">
-         <item row="1" column="1">
-          <widget class="QLabel" name="label">
-           <property name="styleSheet">
-            <string notr="true">font: 20pt &quot;华文隶书&quot;;</string>
+         <item row="3" column="0">
+          <spacer name="horizontalSpacer_16">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
            </property>
-           <property name="text">
-            <string>管理员信息</string>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
            </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
+          </spacer>
          </item>
          <item row="5" column="1">
           <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -819,14 +793,14 @@ border: none;</string>
               <string>在表格输入新用户信息点击即可</string>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(0, 170, 127);
+              <string notr="true">background-color: rgb(0, 170, 255);
 color: rgb(255, 255, 255);
 font: 25 9pt &quot;Bahnschrift Light&quot;;
 font: 10pt &quot;华文隶书&quot;;
-border-radius:7px;</string>
+border-radius:8px;</string>
              </property>
              <property name="text">
-              <string>添加新用户</string>
+              <string>添加</string>
              </property>
             </widget>
            </item>
@@ -855,11 +829,11 @@ border-radius:7px;</string>
               <string>鼠标点击要删除的行</string>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(0, 170, 127);
+              <string notr="true">background-color: rgb(255, 0, 0);
 color: rgb(255, 255, 255);
 font: 25 9pt &quot;Bahnschrift Light&quot;;
 font: 10pt &quot;华文隶书&quot;;
-border-radius:7px;</string>
+border-radius:8px;</string>
              </property>
              <property name="text">
               <string>删除</string>
@@ -891,7 +865,7 @@ border-radius:7px;</string>
               <string>直接进行修改点击</string>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(0, 170, 127);
+              <string notr="true">background-color: rgb(0, 170, 255);
 color: rgb(255, 255, 255);
 font: 25 9pt &quot;Bahnschrift Light&quot;;
 font: 10pt &quot;华文隶书&quot;;
@@ -917,8 +891,47 @@ border-radius:7px;</string>
            </item>
           </layout>
          </item>
-         <item row="3" column="0">
-          <spacer name="horizontalSpacer_16">
+         <item row="4" column="1">
+          <spacer name="verticalSpacer_18">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="6" column="1">
+          <spacer name="verticalSpacer_21">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLabel" name="label">
+           <property name="styleSheet">
+            <string notr="true">font: 20pt &quot;华文隶书&quot;;</string>
+           </property>
+           <property name="text">
+            <string>管理员信息</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <spacer name="horizontalSpacer_15">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
@@ -926,6 +939,32 @@ border-radius:7px;</string>
             <size>
              <width>40</width>
              <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="1">
+          <spacer name="verticalSpacer_20">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="2" column="1">
+          <spacer name="verticalSpacer_19">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
             </size>
            </property>
           </spacer>
@@ -1050,71 +1089,6 @@ border-radius:7px;</string>
            </item>
           </widget>
          </item>
-         <item row="4" column="1">
-          <spacer name="verticalSpacer_18">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="0" column="1">
-          <spacer name="verticalSpacer_20">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="3" column="2">
-          <spacer name="horizontalSpacer_15">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="2" column="1">
-          <spacer name="verticalSpacer_19">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="6" column="1">
-          <spacer name="verticalSpacer_21">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
         </layout>
        </item>
       </layout>
@@ -1129,6 +1103,13 @@ border-radius:7px;</string>
          <height>51</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 170, 255);
+color: rgb(255, 255, 255);
+font: 25 9pt &quot;Bahnschrift Light&quot;;
+font: 12pt &quot;华文隶书&quot;;
+border-radius:14px;</string>
+       </property>
        <property name="text">
         <string>释放资源</string>
        </property>
@@ -1142,6 +1123,13 @@ border-radius:7px;</string>
          <height>51</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 170, 255);
+color: rgb(255, 255, 255);
+font: 25 9pt &quot;Bahnschrift Light&quot;;
+font: 12pt &quot;华文隶书&quot;;
+border-radius:14px;</string>
+       </property>
        <property name="text">
         <string>暂停</string>
        </property>
@@ -1149,8 +1137,8 @@ border-radius:7px;</string>
       <widget class="QLabel" name="camera_label">
        <property name="geometry">
         <rect>
-         <x>110</x>
-         <y>50</y>
+         <x>300</x>
+         <y>30</y>
          <width>611</width>
          <height>511</height>
         </rect>
@@ -1180,6 +1168,13 @@ border-radius:7px;</string>
          <height>50</height>
         </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 170, 255);
+color: rgb(255, 255, 255);
+font: 25 9pt &quot;Bahnschrift Light&quot;;
+font: 12pt &quot;华文隶书&quot;;
+border-radius:14px;</string>
+       </property>
        <property name="text">
         <string>初始化</string>
        </property>
@@ -1208,6 +1203,12 @@ border-radius:7px;</string>
        <property name="layoutDirection">
         <enum>Qt::LeftToRight</enum>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 170, 255);
+color: rgb(255, 255, 255);
+font: 25 9pt &quot;Bahnschrift Light&quot;;
+font: 12pt &quot;华文隶书&quot;;</string>
+       </property>
        <property name="currentText">
         <string extracomment="开启的摄像头"/>
        </property>
@@ -1235,6 +1236,13 @@ border-radius:7px;</string>
          <width>200</width>
          <height>16777215</height>
         </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 170, 255);
+color: rgb(255, 255, 255);
+font: 25 9pt &quot;Bahnschrift Light&quot;;
+font: 12pt &quot;华文隶书&quot;;
+border-radius:14px;</string>
        </property>
        <property name="text">
         <string>Open</string>

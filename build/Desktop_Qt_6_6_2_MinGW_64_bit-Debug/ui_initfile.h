@@ -73,7 +73,9 @@ public:
         horizontalLayout_2->setObjectName("horizontalLayout_2");
         label = new QLabel(initFile);
         label->setObjectName("label");
-        label->setStyleSheet(QString::fromUtf8("font: 15pt \"\345\255\227\345\277\203\345\235\212\347\214\253\347\232\204\345\244\251\347\251\272\344\271\213\345\237\216\357\274\210\347\211\271\345\210\253\345\256\232\345\210\266\347\211\210\357\274\211\";"));
+        label->setMinimumSize(QSize(280, 280));
+        label->setStyleSheet(QString::fromUtf8("font: 15pt \"\345\255\227\345\277\203\345\235\212\347\214\253\347\232\204\345\244\251\347\251\272\344\271\213\345\237\216\357\274\210\347\211\271\345\210\253\345\256\232\345\210\266\347\211\210\357\274\211\";\n"
+"font: bold;"));
         label->setTextFormat(Qt::AutoText);
         label->setAlignment(Qt::AlignCenter);
         label->setMargin(50);
@@ -147,7 +149,7 @@ public:
         IP->setObjectName("IP");
         IP->setMinimumSize(QSize(1, 52));
         IP->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
-"border:1px groove gray;\n"
+"border:1px groove transparent;\n"
 "border-radius:7px;\n"
 "padding:2px 4px;\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
@@ -158,7 +160,7 @@ public:
         PORT->setObjectName("PORT");
         PORT->setMinimumSize(QSize(0, 52));
         PORT->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
-"border:1px groove gray;\n"
+"border:1px groove transparent;\n"
 "border-radius:7px;\n"
 "padding:2px 4px;\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
@@ -169,7 +171,7 @@ public:
         database->setObjectName("database");
         database->setMinimumSize(QSize(0, 52));
         database->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
-"border:1px groove gray;\n"
+"border:1px groove transparent;\n"
 "border-radius:7px;\n"
 "padding:2px 4px;\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
@@ -180,7 +182,7 @@ public:
         account->setObjectName("account");
         account->setMinimumSize(QSize(200, 52));
         account->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
-"border:1px groove gray;\n"
+"border:1px groove transparent;\n"
 "border-radius:7px;\n"
 "padding:2px 4px;\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
@@ -191,7 +193,7 @@ public:
         password->setObjectName("password");
         password->setMinimumSize(QSize(0, 52));
         password->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
-"border:1px groove gray;\n"
+"border:1px groove transparent;\n"
 "border-radius:7px;\n"
 "padding:2px 4px;\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
@@ -203,7 +205,7 @@ public:
         parking_name->setObjectName("parking_name");
         parking_name->setMinimumSize(QSize(0, 52));
         parking_name->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
-"border:1px groove gray;\n"
+"border:1px groove transparent;\n"
 "border-radius:7px;\n"
 "padding:2px 4px;\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
@@ -214,7 +216,7 @@ public:
         park_fee->setObjectName("park_fee");
         park_fee->setMinimumSize(QSize(0, 52));
         park_fee->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
-"border:1px groove gray;\n"
+"border:1px groove transparent;\n"
 "border-radius:7px;\n"
 "padding:2px 4px;\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
@@ -225,7 +227,7 @@ public:
         park_count->setObjectName("park_count");
         park_count->setMinimumSize(QSize(0, 52));
         park_count->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
-"border:1px groove gray;\n"
+"border:1px groove transparent;\n"
 "border-radius:7px;\n"
 "padding:2px 4px;\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
@@ -254,13 +256,13 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(cancel_submit->sizePolicy().hasHeightForWidth());
         cancel_submit->setSizePolicy(sizePolicy1);
-        cancel_submit->setMinimumSize(QSize(115, 57));
+        cancel_submit->setMinimumSize(QSize(200, 50));
         cancel_submit->setContextMenuPolicy(Qt::DefaultContextMenu);
         cancel_submit->setLayoutDirection(Qt::LeftToRight);
-        cancel_submit->setStyleSheet(QString::fromUtf8("background-color: rgbrgb(255, 85, 0);\n"
+        cancel_submit->setStyleSheet(QString::fromUtf8("background-color: rgb(220, 220, 220);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 25 9pt \"Bahnschrift Light\";\n"
-"font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
+"font: 12pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
 "border-radius:7px;"));
         cancel_submit->setLocale(QLocale(QLocale::Chinese, QLocale::China));
 
@@ -270,14 +272,14 @@ public:
         submit_init->setObjectName("submit_init");
         sizePolicy1.setHeightForWidth(submit_init->sizePolicy().hasHeightForWidth());
         submit_init->setSizePolicy(sizePolicy1);
-        submit_init->setMinimumSize(QSize(115, 57));
+        submit_init->setMinimumSize(QSize(200, 50));
         submit_init->setContextMenuPolicy(Qt::DefaultContextMenu);
         submit_init->setLayoutDirection(Qt::LeftToRight);
-        submit_init->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);\n"
+        submit_init->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 25 9pt \"Bahnschrift Light\";\n"
-"font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
-"border-radius:7px;"));
+"font: 12pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
+"border-radius:8px;"));
         submit_init->setLocale(QLocale(QLocale::Chinese, QLocale::China));
 
         horizontalLayout_3->addWidget(submit_init);

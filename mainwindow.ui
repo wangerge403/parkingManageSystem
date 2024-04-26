@@ -90,7 +90,7 @@ font: 20pt &quot;华文隶书&quot;;</string>
             <property name="minimumSize">
              <size>
               <width>0</width>
-              <height>60</height>
+              <height>50</height>
              </size>
             </property>
             <property name="styleSheet">
@@ -142,7 +142,7 @@ font: 10pt &quot;华文隶书&quot;;</string>
             <property name="minimumSize">
              <size>
               <width>0</width>
-              <height>61</height>
+              <height>50</height>
              </size>
             </property>
             <property name="styleSheet">
@@ -184,6 +184,9 @@ font: 10pt &quot;华文隶书&quot;;</string>
             <property name="topMargin">
              <number>10</number>
             </property>
+            <property name="bottomMargin">
+             <number>15</number>
+            </property>
             <item row="0" column="0">
              <widget class="QCheckBox" name="remebermeBox">
               <property name="text">
@@ -211,7 +214,7 @@ font: 10pt &quot;华文隶书&quot;;</string>
             <property name="minimumSize">
              <size>
               <width>0</width>
-              <height>61</height>
+              <height>50</height>
              </size>
             </property>
             <property name="styleSheet">
@@ -232,7 +235,7 @@ font: 14pt &quot;华文隶书&quot;;</string>
             <property name="minimumSize">
              <size>
               <width>0</width>
-              <height>61</height>
+              <height>50</height>
              </size>
             </property>
             <property name="styleSheet">

@@ -42,8 +42,15 @@
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QLabel" name="label">
+       <property name="minimumSize">
+        <size>
+         <width>280</width>
+         <height>280</height>
+        </size>
+       </property>
        <property name="styleSheet">
-        <string notr="true">font: 15pt &quot;字心坊猫的天空之城（特别定制版）&quot;;</string>
+        <string notr="true">font: 15pt &quot;字心坊猫的天空之城（特别定制版）&quot;;
+font: bold;</string>
        </property>
        <property name="text">
         <string>停车场数据初始化</string>
@@ -176,7 +183,7 @@
            </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(247, 247, 247);
-border:1px groove gray;
+border:1px groove transparent;
 border-radius:7px;
 padding:2px 4px;
 font: 10pt &quot;华文隶书&quot;;</string>
@@ -199,7 +206,7 @@ font: 10pt &quot;华文隶书&quot;;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(247, 247, 247);
-border:1px groove gray;
+border:1px groove transparent;
 border-radius:7px;
 padding:2px 4px;
 font: 10pt &quot;华文隶书&quot;;</string>
@@ -222,7 +229,7 @@ font: 10pt &quot;华文隶书&quot;;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(247, 247, 247);
-border:1px groove gray;
+border:1px groove transparent;
 border-radius:7px;
 padding:2px 4px;
 font: 10pt &quot;华文隶书&quot;;</string>
@@ -245,7 +252,7 @@ font: 10pt &quot;华文隶书&quot;;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(247, 247, 247);
-border:1px groove gray;
+border:1px groove transparent;
 border-radius:7px;
 padding:2px 4px;
 font: 10pt &quot;华文隶书&quot;;</string>
@@ -268,7 +275,7 @@ font: 10pt &quot;华文隶书&quot;;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(247, 247, 247);
-border:1px groove gray;
+border:1px groove transparent;
 border-radius:7px;
 padding:2px 4px;
 font: 10pt &quot;华文隶书&quot;;</string>
@@ -294,7 +301,7 @@ font: 10pt &quot;华文隶书&quot;;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(247, 247, 247);
-border:1px groove gray;
+border:1px groove transparent;
 border-radius:7px;
 padding:2px 4px;
 font: 10pt &quot;华文隶书&quot;;</string>
@@ -317,7 +324,7 @@ font: 10pt &quot;华文隶书&quot;;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(247, 247, 247);
-border:1px groove gray;
+border:1px groove transparent;
 border-radius:7px;
 padding:2px 4px;
 font: 10pt &quot;华文隶书&quot;;</string>
@@ -340,7 +347,7 @@ font: 10pt &quot;华文隶书&quot;;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(247, 247, 247);
-border:1px groove gray;
+border:1px groove transparent;
 border-radius:7px;
 padding:2px 4px;
 font: 10pt &quot;华文隶书&quot;;</string>
@@ -384,8 +391,8 @@ font: 10pt &quot;华文隶书&quot;;</string>
        </property>
        <property name="minimumSize">
         <size>
-         <width>115</width>
-         <height>57</height>
+         <width>200</width>
+         <height>50</height>
         </size>
        </property>
        <property name="contextMenuPolicy">
@@ -395,10 +402,10 @@ font: 10pt &quot;华文隶书&quot;;</string>
         <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgbrgb(255, 85, 0);
+        <string notr="true">background-color: rgb(220, 220, 220);
 color: rgb(255, 255, 255);
 font: 25 9pt &quot;Bahnschrift Light&quot;;
-font: 10pt &quot;华文隶书&quot;;
+font: 12pt &quot;华文隶书&quot;;
 border-radius:7px;</string>
        </property>
        <property name="locale">
@@ -419,8 +426,8 @@ border-radius:7px;</string>
        </property>
        <property name="minimumSize">
         <size>
-         <width>115</width>
-         <height>57</height>
+         <width>200</width>
+         <height>50</height>
         </size>
        </property>
        <property name="contextMenuPolicy">
@@ -430,11 +437,11 @@ border-radius:7px;</string>
         <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(0, 170, 127);
+        <string notr="true">background-color: rgb(0, 170, 255);
 color: rgb(255, 255, 255);
 font: 25 9pt &quot;Bahnschrift Light&quot;;
-font: 10pt &quot;华文隶书&quot;;
-border-radius:7px;</string>
+font: 12pt &quot;华文隶书&quot;;
+border-radius:8px;</string>
        </property>
        <property name="locale">
         <locale language="Chinese" country="China"/>

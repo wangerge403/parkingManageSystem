@@ -110,4 +110,7 @@ DISTFILES += \
     trainModel/annCh.xml \
     trainModel/svm_hist.xml \
 
+RESOURCES += \
+    images.qrc
+
 

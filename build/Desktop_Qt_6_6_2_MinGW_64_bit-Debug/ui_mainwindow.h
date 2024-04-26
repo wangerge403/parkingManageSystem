@@ -87,7 +87,7 @@ public:
 
         lineEdit_username = new QLineEdit(centralwidget);
         lineEdit_username->setObjectName("lineEdit_username");
-        lineEdit_username->setMinimumSize(QSize(0, 60));
+        lineEdit_username->setMinimumSize(QSize(0, 50));
         lineEdit_username->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
 "border:1px groove transparent;\n"
 "border-radius:7px;\n"
@@ -113,7 +113,7 @@ public:
 
         lineEdit_password = new QLineEdit(centralwidget);
         lineEdit_password->setObjectName("lineEdit_password");
-        lineEdit_password->setMinimumSize(QSize(0, 61));
+        lineEdit_password->setMinimumSize(QSize(0, 50));
         lineEdit_password->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
 "border:1px groove transparent;\n"
 "border-radius:7px;\n"
@@ -129,7 +129,7 @@ public:
 
         gridLayout_3 = new QGridLayout();
         gridLayout_3->setObjectName("gridLayout_3");
-        gridLayout_3->setContentsMargins(9, 10, -1, -1);
+        gridLayout_3->setContentsMargins(9, 10, -1, 15);
         remebermeBox = new QCheckBox(centralwidget);
         remebermeBox->setObjectName("remebermeBox");
 
@@ -147,7 +147,7 @@ public:
         horizontalLayout->setContentsMargins(9, 0, -1, -1);
         pushButton_2 = new QPushButton(centralwidget);
         pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setMinimumSize(QSize(0, 61));
+        pushButton_2->setMinimumSize(QSize(0, 50));
         pushButton_2->setStyleSheet(QString::fromUtf8("background-color: rgba(64, 145, 232, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "border:0px groove gray;\n"
@@ -159,7 +159,7 @@ public:
 
         return_2 = new QPushButton(centralwidget);
         return_2->setObjectName("return_2");
-        return_2->setMinimumSize(QSize(0, 61));
+        return_2->setMinimumSize(QSize(0, 50));
         return_2->setStyleSheet(QString::fromUtf8("background-color: rgba(64, 145, 232, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "border:0px groove gray;\n"

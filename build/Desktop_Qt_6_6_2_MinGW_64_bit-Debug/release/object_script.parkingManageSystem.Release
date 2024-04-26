@@ -28,6 +28,7 @@ release/corrected_svm.o
 release/erfilter.o
 release/xmlParser.o
 release/camerasThread.o
+release/qrc_images.o
 release/moc_dbThreadPool.o
 release/moc_init.o
 release/moc_login.o

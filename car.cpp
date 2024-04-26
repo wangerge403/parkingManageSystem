@@ -12,7 +12,7 @@ Car::Car(QWidget *parent) :
 {
     ui->setupUi(this);
     qDebug()<<"进入停车场主页";
-    setWindowTitle("停车场管理系统");
+    setWindowTitle("xxx物业车辆管理系统");
     mysql_C = new mysql;
 
     // 显示系统时间
@@ -303,7 +303,8 @@ void Car::on_camera_button_clicked()
     camera->start();  // 开启摄像头
 }
 
-// 点击主页判断状态
+// 点击返回主页
+// 判断状态
 void Car::on_MainButton_clicked()
 {
     timer->start(2000);
@@ -325,19 +326,18 @@ void Car::on_MainButton_clicked()
         // }
     } else {
         // 如果摄像头不是激活状态的逻辑处理
-        if (player && player->playbackState() != QMediaPlayer::PlayingState) {
-            player->stop(); // 停止播放文件
-        }
+        // if (player && player->playbackState() != QMediaPlayer::PlayingState) {
+        //     player->stop(); // 停止播放文件
+        // }
 
-        if (viewfinder && viewfinder->isVisible()) {
-            viewfinder->setVisible(false); // 隐藏摄像头的实时预览区域
-        }
+        // if (viewfinder && viewfinder->isVisible()) {
+        //     viewfinder->setVisible(false); // 隐藏摄像头的实时预览区域
+        // }
 
         // if (videowidget && !videowidget->isVisible()) {
         //     videowidget->setVisible(true); // 显示视频播放的 QVideoWidget
         // }
     }
-
     qDebug() << "点击了返回主页按钮";
     park_num();
 }
@@ -942,28 +942,26 @@ void Car::on_Car_delete_clicked()
     }
 }
 
-// 监控
-void Car::on_check_camera_clicked()  //打开右侧监控按钮
+// 摄像头列表 - 按钮
+void Car::on_check_camera_clicked()
 {
     // 获得当前的摄像头数量
    for(int i = 0;i < Camera::getCameraCount(); )
    {
-       //将摄像头数量呈现到comboBox里面
+       // 摄像头数量
        ui->comboBox->addItem("摄像头:  "+QString::number(++i));
-       qDebug() << i;
    }
-   // 判断主线程的摄像头是否开启，关闭摄像头
-   ui->comboBox->setCurrentIndex(0);  //默认为第一个
-   camera->stop(); //停止摄像头
+   // // 判断主线程的摄像头是否开启，关闭摄像头
+   // ui->comboBox->setCurrentIndex(0);  //默认为第一个
+   // // camera->stop(); //停止摄像头
 
 
-   viewfinder = new QVideoWidget(ui->camera_label);
-   viewfinder->setAspectRatioMode(Qt::IgnoreAspectRatio); //设置宽高比为自由调整
-   //viemfinder->resize(500,250);
-   viewfinder->setGeometry(10, 10, 500, 250);
+   // viewfinder = new QVideoWidget(ui->camera_label);
+   // viewfinder->setAspectRatioMode(Qt::IgnoreAspectRatio); //设置宽高比为自由调整
+   // viewfinder->setGeometry(10, 10, 500, 250);
 }
 
-// 监控-初始化
+// 摄像头列表-初始化
 void Car::on_thread_camera_init_clicked()
 {
    // 建立Camerathread线程
@@ -998,7 +996,6 @@ void Car::on_camera_open_button_clicked()
        qDebug()<<"启动子线程 ";
        emit Camerathread_open_Signale();
        ui->camera_open_button->setText("Close");
-       bool camera_status = true; // 停止状态 需要修复bug
    }
    else{
        ui->camera_open_button->setText("Open");

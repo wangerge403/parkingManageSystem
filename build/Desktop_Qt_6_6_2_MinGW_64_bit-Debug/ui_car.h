@@ -64,12 +64,8 @@ public:
     QLabel *park_reserve;
     QWidget *message;
     QGridLayout *gridLayout_2;
-    QSpacerItem *horizontalSpacer_9;
     QSpacerItem *horizontalSpacer_3;
     QHBoxLayout *horizontalLayout_6;
-    QSpacerItem *horizontalSpacer_4;
-    QLabel *labelCar;
-    QSpacerItem *horizontalSpacer_5;
     QLineEdit *find_lineEdit;
     QDateTimeEdit *begin_dateTimeEdit;
     QDateTimeEdit *end_dateTimeEdit;
@@ -78,12 +74,14 @@ public:
     QSpacerItem *horizontalSpacer_8;
     QPushButton *Car_delete;
     QSpacerItem *horizontalSpacer_7;
-    QTableWidget *tableCar;
     QSpacerItem *verticalSpacer_12;
+    QSpacerItem *horizontalSpacer_9;
+    QTableWidget *tableCar;
+    QLabel *labelCar;
     QWidget *ctrol;
     QVBoxLayout *verticalLayout_9;
     QGridLayout *gridLayout_3;
-    QLabel *label;
+    QSpacerItem *horizontalSpacer_16;
     QHBoxLayout *horizontalLayout_4;
     QSpacerItem *horizontalSpacer_14;
     QPushButton *ButtonADD;
@@ -92,13 +90,13 @@ public:
     QSpacerItem *horizontalSpacer_12;
     QPushButton *ButtonModify;
     QSpacerItem *horizontalSpacer_13;
-    QSpacerItem *horizontalSpacer_16;
-    QTableWidget *tablectrol;
     QSpacerItem *verticalSpacer_18;
-    QSpacerItem *verticalSpacer_20;
-    QSpacerItem *horizontalSpacer_15;
-    QSpacerItem *verticalSpacer_19;
     QSpacerItem *verticalSpacer_21;
+    QLabel *label;
+    QSpacerItem *horizontalSpacer_15;
+    QSpacerItem *verticalSpacer_20;
+    QSpacerItem *verticalSpacer_19;
+    QTableWidget *tablectrol;
     QWidget *camera_page;
     QPushButton *thread_release;
     QPushButton *thread_pause;
@@ -387,30 +385,12 @@ public:
         message->setObjectName("message");
         gridLayout_2 = new QGridLayout(message);
         gridLayout_2->setObjectName("gridLayout_2");
-        horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        gridLayout_2->addItem(horizontalSpacer_9, 1, 2, 1, 1);
-
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
         gridLayout_2->addItem(horizontalSpacer_3, 1, 0, 1, 1);
 
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setObjectName("horizontalLayout_6");
-        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout_6->addItem(horizontalSpacer_4);
-
-        labelCar = new QLabel(message);
-        labelCar->setObjectName("labelCar");
-        labelCar->setStyleSheet(QString::fromUtf8("font: 17pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
-
-        horizontalLayout_6->addWidget(labelCar);
-
-        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout_6->addItem(horizontalSpacer_5);
-
         find_lineEdit = new QLineEdit(message);
         find_lineEdit->setObjectName("find_lineEdit");
         QSizePolicy sizePolicy1(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Fixed);
@@ -420,7 +400,7 @@ public:
         find_lineEdit->setSizePolicy(sizePolicy1);
         find_lineEdit->setMinimumSize(QSize(100, 40));
         find_lineEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
-"border:1px groove gray;\n"
+"border:1px groove transparent;\n"
 "border-radius:7px;\n"
 "padding:2px 4px;\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
@@ -431,7 +411,7 @@ public:
         begin_dateTimeEdit->setObjectName("begin_dateTimeEdit");
         begin_dateTimeEdit->setMinimumSize(QSize(0, 40));
         begin_dateTimeEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
-"border:1px groove gray;\n"
+"border:1px groove transparent;\n"
 "border-radius:7px;\n"
 "padding:2px 4px;\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
@@ -444,7 +424,7 @@ public:
         end_dateTimeEdit->setObjectName("end_dateTimeEdit");
         end_dateTimeEdit->setMinimumSize(QSize(0, 40));
         end_dateTimeEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
-"border:1px groove gray;\n"
+"border:1px groove transparent;\n"
 "border-radius:7px;\n"
 "padding:2px 4px;\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
@@ -459,11 +439,11 @@ public:
         Carcheck = new QPushButton(message);
         Carcheck->setObjectName("Carcheck");
         Carcheck->setMinimumSize(QSize(100, 40));
-        Carcheck->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);\n"
+        Carcheck->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 25 9pt \"Bahnschrift Light\";\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
-"border-radius:7px;"));
+"border-radius:8px;"));
 
         horizontalLayout_6->addWidget(Carcheck);
 
@@ -475,7 +455,7 @@ public:
         Car_delete->setObjectName("Car_delete");
         Car_delete->setMinimumSize(QSize(100, 40));
         Car_delete->setToolTipDuration(-3);
-        Car_delete->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);\n"
+        Car_delete->setStyleSheet(QString::fromUtf8("background-color:rgb(255, 0, 0);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 25 9pt \"Bahnschrift Light\";\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
@@ -489,6 +469,14 @@ public:
 
 
         gridLayout_2->addLayout(horizontalLayout_6, 0, 1, 1, 1);
+
+        verticalSpacer_12 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        gridLayout_2->addItem(verticalSpacer_12, 7, 1, 1, 1);
+
+        horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_2->addItem(horizontalSpacer_9, 1, 2, 1, 1);
 
         tableCar = new QTableWidget(message);
         if (tableCar->columnCount() < 7)
@@ -508,11 +496,13 @@ public:
         tableCar->setRowCount(10);
         tableCar->setColumnCount(7);
 
-        gridLayout_2->addWidget(tableCar, 1, 1, 1, 1);
+        gridLayout_2->addWidget(tableCar, 8, 1, 1, 1);
 
-        verticalSpacer_12 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+        labelCar = new QLabel(message);
+        labelCar->setObjectName("labelCar");
+        labelCar->setStyleSheet(QString::fromUtf8("font: 17pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
 
-        gridLayout_2->addItem(verticalSpacer_12, 2, 1, 1, 1);
+        gridLayout_2->addWidget(labelCar, 0, 0, 1, 1);
 
         stack->addWidget(message);
         ctrol = new QWidget();
@@ -521,12 +511,9 @@ public:
         verticalLayout_9->setObjectName("verticalLayout_9");
         gridLayout_3 = new QGridLayout();
         gridLayout_3->setObjectName("gridLayout_3");
-        label = new QLabel(ctrol);
-        label->setObjectName("label");
-        label->setStyleSheet(QString::fromUtf8("font: 20pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
-        label->setAlignment(Qt::AlignCenter);
+        horizontalSpacer_16 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
-        gridLayout_3->addWidget(label, 1, 1, 1, 1);
+        gridLayout_3->addItem(horizontalSpacer_16, 3, 0, 1, 1);
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName("horizontalLayout_4");
@@ -537,11 +524,11 @@ public:
         ButtonADD = new QPushButton(ctrol);
         ButtonADD->setObjectName("ButtonADD");
         ButtonADD->setMinimumSize(QSize(100, 45));
-        ButtonADD->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);\n"
+        ButtonADD->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 25 9pt \"Bahnschrift Light\";\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
-"border-radius:7px;"));
+"border-radius:8px;"));
 
         horizontalLayout_4->addWidget(ButtonADD);
 
@@ -552,11 +539,11 @@ public:
         ButtonDelete = new QPushButton(ctrol);
         ButtonDelete->setObjectName("ButtonDelete");
         ButtonDelete->setMinimumSize(QSize(100, 45));
-        ButtonDelete->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);\n"
+        ButtonDelete->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 0, 0);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 25 9pt \"Bahnschrift Light\";\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
-"border-radius:7px;"));
+"border-radius:8px;"));
 
         horizontalLayout_4->addWidget(ButtonDelete);
 
@@ -567,7 +554,7 @@ public:
         ButtonModify = new QPushButton(ctrol);
         ButtonModify->setObjectName("ButtonModify");
         ButtonModify->setMinimumSize(QSize(100, 45));
-        ButtonModify->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);\n"
+        ButtonModify->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 25 9pt \"Bahnschrift Light\";\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
@@ -582,9 +569,32 @@ public:
 
         gridLayout_3->addLayout(horizontalLayout_4, 5, 1, 1, 1);
 
-        horizontalSpacer_16 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+        verticalSpacer_18 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
-        gridLayout_3->addItem(horizontalSpacer_16, 3, 0, 1, 1);
+        gridLayout_3->addItem(verticalSpacer_18, 4, 1, 1, 1);
+
+        verticalSpacer_21 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        gridLayout_3->addItem(verticalSpacer_21, 6, 1, 1, 1);
+
+        label = new QLabel(ctrol);
+        label->setObjectName("label");
+        label->setStyleSheet(QString::fromUtf8("font: 20pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
+        label->setAlignment(Qt::AlignCenter);
+
+        gridLayout_3->addWidget(label, 1, 1, 1, 1);
+
+        horizontalSpacer_15 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_3->addItem(horizontalSpacer_15, 3, 2, 1, 1);
+
+        verticalSpacer_20 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        gridLayout_3->addItem(verticalSpacer_20, 0, 1, 1, 1);
+
+        verticalSpacer_19 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        gridLayout_3->addItem(verticalSpacer_19, 2, 1, 1, 1);
 
         tablectrol = new QTableWidget(ctrol);
         if (tablectrol->columnCount() < 5)
@@ -634,26 +644,6 @@ public:
 
         gridLayout_3->addWidget(tablectrol, 3, 1, 1, 1);
 
-        verticalSpacer_18 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        gridLayout_3->addItem(verticalSpacer_18, 4, 1, 1, 1);
-
-        verticalSpacer_20 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        gridLayout_3->addItem(verticalSpacer_20, 0, 1, 1, 1);
-
-        horizontalSpacer_15 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        gridLayout_3->addItem(horizontalSpacer_15, 3, 2, 1, 1);
-
-        verticalSpacer_19 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        gridLayout_3->addItem(verticalSpacer_19, 2, 1, 1, 1);
-
-        verticalSpacer_21 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        gridLayout_3->addItem(verticalSpacer_21, 6, 1, 1, 1);
-
 
         verticalLayout_9->addLayout(gridLayout_3);
 
@@ -663,29 +653,53 @@ public:
         thread_release = new QPushButton(camera_page);
         thread_release->setObjectName("thread_release");
         thread_release->setGeometry(QRect(730, 600, 101, 51));
+        thread_release->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
+"color: rgb(255, 255, 255);\n"
+"font: 25 9pt \"Bahnschrift Light\";\n"
+"font: 12pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
+"border-radius:14px;"));
         thread_pause = new QPushButton(camera_page);
         thread_pause->setObjectName("thread_pause");
         thread_pause->setGeometry(QRect(870, 600, 121, 51));
+        thread_pause->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
+"color: rgb(255, 255, 255);\n"
+"font: 25 9pt \"Bahnschrift Light\";\n"
+"font: 12pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
+"border-radius:14px;"));
         camera_label = new QLabel(camera_page);
         camera_label->setObjectName("camera_label");
-        camera_label->setGeometry(QRect(110, 50, 611, 511));
+        camera_label->setGeometry(QRect(300, 30, 611, 511));
         camera_label->setMinimumSize(QSize(0, 500));
         thread_camera_init = new QPushButton(camera_page);
         thread_camera_init->setObjectName("thread_camera_init");
         thread_camera_init->setGeometry(QRect(180, 600, 93, 50));
         thread_camera_init->setMinimumSize(QSize(50, 50));
+        thread_camera_init->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
+"color: rgb(255, 255, 255);\n"
+"font: 25 9pt \"Bahnschrift Light\";\n"
+"font: 12pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
+"border-radius:14px;"));
         comboBox = new QComboBox(camera_page);
         comboBox->setObjectName("comboBox");
         comboBox->setGeometry(QRect(330, 600, 72, 50));
         comboBox->setMinimumSize(QSize(0, 50));
         comboBox->setMaximumSize(QSize(200, 30));
         comboBox->setLayoutDirection(Qt::LeftToRight);
+        comboBox->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
+"color: rgb(255, 255, 255);\n"
+"font: 25 9pt \"Bahnschrift Light\";\n"
+"font: 12pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
         comboBox->setSizeAdjustPolicy(QComboBox::AdjustToContents);
         camera_open_button = new QPushButton(camera_page);
         camera_open_button->setObjectName("camera_open_button");
         camera_open_button->setGeometry(QRect(590, 600, 93, 50));
         camera_open_button->setMinimumSize(QSize(0, 50));
         camera_open_button->setMaximumSize(QSize(200, 16777215));
+        camera_open_button->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
+"color: rgb(255, 255, 255);\n"
+"font: 25 9pt \"Bahnschrift Light\";\n"
+"font: 12pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
+"border-radius:14px;"));
         stack->addWidget(camera_page);
 
         horizontalLayout_7->addWidget(stack);
@@ -776,7 +790,7 @@ public:
 
         retranslateUi(Car);
 
-        stack->setCurrentIndex(0);
+        stack->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(Car);
@@ -795,14 +809,13 @@ public:
         camera->setText(QString());
         selectImgButton->setText(QCoreApplication::translate("Car", "\351\200\211\346\213\251\345\233\276\347\211\207", nullptr));
         fileopen->setText(QCoreApplication::translate("Car", "\346\267\273\345\212\240\350\247\206\351\242\221", nullptr));
-        camera_button->setText(QCoreApplication::translate("Car", "\346\221\204\345\203\217\345\244\264", nullptr));
+        camera_button->setText(QCoreApplication::translate("Car", "\345\274\200\345\220\257/\345\205\263\351\227\255\346\221\204\345\203\217\345\244\264", nullptr));
         video_pause->setText(QCoreApplication::translate("Car", "\346\232\202\345\201\234", nullptr));
         camera_take->setText(QCoreApplication::translate("Car", "\346\210\252\345\217\226\347\205\247\347\211\207", nullptr));
         video_start->setText(QCoreApplication::translate("Car", "\346\222\255\346\224\276", nullptr));
         park_all->setText(QString());
         park_now->setText(QString());
         park_reserve->setText(QString());
-        labelCar->setText(QCoreApplication::translate("Car", "\350\275\246\345\272\223\344\277\241\346\201\257\347\263\273\347\273\237", nullptr));
         find_lineEdit->setInputMask(QString());
         find_lineEdit->setPlaceholderText(QCoreApplication::translate("Car", "\346\237\245\350\257\242\347\232\204\350\275\246\347\211\214\345\217\267", nullptr));
         Carcheck->setText(QCoreApplication::translate("Car", "\346\237\245\350\257\242", nullptr));
@@ -810,11 +823,11 @@ public:
         Car_delete->setToolTip(QCoreApplication::translate("Car", "\351\274\240\346\240\207\351\200\211\344\270\255\350\275\246\347\211\214\345\220\216\347\202\271\345\207\273\345\215\263\345\217\257\345\210\240\351\231\244", nullptr));
 #endif // QT_CONFIG(tooltip)
         Car_delete->setText(QCoreApplication::translate("Car", "\345\210\240\351\231\244", nullptr));
-        label->setText(QCoreApplication::translate("Car", "\347\256\241\347\220\206\345\221\230\344\277\241\346\201\257", nullptr));
+        labelCar->setText(QCoreApplication::translate("Car", ">>\350\275\246\350\276\206\344\277\241\346\201\257", nullptr));
 #if QT_CONFIG(tooltip)
         ButtonADD->setToolTip(QCoreApplication::translate("Car", "\345\234\250\350\241\250\346\240\274\350\276\223\345\205\245\346\226\260\347\224\250\346\210\267\344\277\241\346\201\257\347\202\271\345\207\273\345\215\263\345\217\257", nullptr));
 #endif // QT_CONFIG(tooltip)
-        ButtonADD->setText(QCoreApplication::translate("Car", "\346\267\273\345\212\240\346\226\260\347\224\250\346\210\267", nullptr));
+        ButtonADD->setText(QCoreApplication::translate("Car", "\346\267\273\345\212\240", nullptr));
 #if QT_CONFIG(tooltip)
         ButtonDelete->setToolTip(QCoreApplication::translate("Car", "\351\274\240\346\240\207\347\202\271\345\207\273\350\246\201\345\210\240\351\231\244\347\232\204\350\241\214", nullptr));
 #endif // QT_CONFIG(tooltip)
@@ -823,6 +836,7 @@ public:
         ButtonModify->setToolTip(QCoreApplication::translate("Car", "\347\233\264\346\216\245\350\277\233\350\241\214\344\277\256\346\224\271\347\202\271\345\207\273", nullptr));
 #endif // QT_CONFIG(tooltip)
         ButtonModify->setText(QCoreApplication::translate("Car", "\344\277\256\346\224\271", nullptr));
+        label->setText(QCoreApplication::translate("Car", "\347\256\241\347\220\206\345\221\230\344\277\241\346\201\257", nullptr));
 
         const bool __sortingEnabled = tablectrol->isSortingEnabled();
         tablectrol->setSortingEnabled(false);

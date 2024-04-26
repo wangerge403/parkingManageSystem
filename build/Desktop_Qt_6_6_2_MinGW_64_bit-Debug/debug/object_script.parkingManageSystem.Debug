@@ -28,6 +28,7 @@ debug/corrected_svm.o
 debug/erfilter.o
 debug/xmlParser.o
 debug/camerasThread.o
+debug/qrc_images.o
 debug/moc_dbThreadPool.o
 debug/moc_init.o
 debug/moc_login.o

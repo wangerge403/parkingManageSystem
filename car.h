@@ -124,14 +124,11 @@ private slots:
     //打开视频文件初始化
     // void video_Init();
 
-
-
     // void on_fileopen_clicked();
 
     // void on_video_start_clicked();
 
     // void on_video_pause_clicked();
-
 
     // void Get_Duration();
     // void Slider_Changed();
@@ -141,11 +138,7 @@ private slots:
 
     void on_camera_button_clicked(); // 开启摄像头槽函数
 
-    // void on_MainButton_clicked();
-
-
     // void updateImage(QImage);
-
 
     void on_check_camera_clicked(); // 监控
     void on_thread_camera_init_clicked(); // 监控-初始化

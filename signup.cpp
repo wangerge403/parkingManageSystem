@@ -9,9 +9,12 @@ Signup::Signup(QWidget *parent) :
     setWindowTitle("车辆管理系统注册");
     mysql(); //mysql初始化
     //设置左侧背景图片
-    QPixmap *pix = new QPixmap(":./images/welcome.png");
+    QPixmap *pix = new QPixmap(":/icon/images/parking.png");
     QSize sz = ui->label_login_image->size();
-    ui->label_login_image->setPixmap(pix->scaled(sz));
+    // 将 QPixmap 缩放到 QLabel 的尺寸，忽略纵横比
+    QPixmap scaledPix = pix->scaled(sz, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    ui->label_login_image->setPixmap(scaledPix);
+
     connect(ui->lineEdit_tel, &QLineEdit::returnPressed, ui->pushButton_sure, &QPushButton::click);
 }
 

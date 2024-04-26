@@ -39,10 +39,8 @@ public:
     QLineEdit *lineEdit_username;
     QLabel *label_4;
     QLineEdit *lineEdit_password;
-    QSpacerItem *verticalSpacer_6;
     QLabel *label_5;
     QLineEdit *lineEdit_sure_password;
-    QSpacerItem *verticalSpacer_5;
     QHBoxLayout *horizontalLayout_3;
     QVBoxLayout *verticalLayout;
     QLabel *label;
@@ -53,11 +51,9 @@ public:
     QLineEdit *lineEdit_tel;
     QSpacerItem *verticalSpacer_3;
     QHBoxLayout *horizontalLayout_2;
-    QSpacerItem *horizontalSpacer_3;
     QPushButton *pushButton_back;
     QSpacerItem *horizontalSpacer_4;
     QPushButton *pushButton_sure;
-    QSpacerItem *horizontalSpacer_5;
     QSpacerItem *verticalSpacer_4;
     QSpacerItem *horizontalSpacer_7;
 
@@ -88,7 +84,7 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(label_login_image->sizePolicy().hasHeightForWidth());
         label_login_image->setSizePolicy(sizePolicy1);
-        label_login_image->setMinimumSize(QSize(488, 512));
+        label_login_image->setMinimumSize(QSize(450, 512));
 
         horizontalLayout_4->addWidget(label_login_image);
 
@@ -136,9 +132,9 @@ public:
 
         lineEdit_username = new QLineEdit(Signup);
         lineEdit_username->setObjectName("lineEdit_username");
-        lineEdit_username->setMinimumSize(QSize(0, 57));
+        lineEdit_username->setMinimumSize(QSize(0, 50));
         lineEdit_username->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
-"border:1px groove gray;\n"
+"border:1px groove transparent;\n"
 "border-radius:7px;\n"
 "padding:2px 4px;\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
@@ -153,19 +149,15 @@ public:
 
         lineEdit_password = new QLineEdit(Signup);
         lineEdit_password->setObjectName("lineEdit_password");
-        lineEdit_password->setMinimumSize(QSize(0, 57));
+        lineEdit_password->setMinimumSize(QSize(0, 50));
         lineEdit_password->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
-"border:1px groove gray;\n"
+"border:1px groove transparent;\n"
 "border-radius:7px;\n"
 "padding:2px 4px;\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
         lineEdit_password->setEchoMode(QLineEdit::Password);
 
         verticalLayout_3->addWidget(lineEdit_password);
-
-        verticalSpacer_6 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        verticalLayout_3->addItem(verticalSpacer_6);
 
         label_5 = new QLabel(Signup);
         label_5->setObjectName("label_5");
@@ -175,19 +167,15 @@ public:
 
         lineEdit_sure_password = new QLineEdit(Signup);
         lineEdit_sure_password->setObjectName("lineEdit_sure_password");
-        lineEdit_sure_password->setMinimumSize(QSize(0, 57));
+        lineEdit_sure_password->setMinimumSize(QSize(0, 50));
         lineEdit_sure_password->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
-"border:1px groove gray;\n"
+"border:1px groove transparent;\n"
 "border-radius:7px;\n"
 "padding:2px 4px;\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
         lineEdit_sure_password->setEchoMode(QLineEdit::Password);
 
         verticalLayout_3->addWidget(lineEdit_sure_password);
-
-        verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        verticalLayout_3->addItem(verticalSpacer_5);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName("horizontalLayout_3");
@@ -201,9 +189,9 @@ public:
 
         lineEdit_name = new QLineEdit(Signup);
         lineEdit_name->setObjectName("lineEdit_name");
-        lineEdit_name->setMinimumSize(QSize(0, 57));
+        lineEdit_name->setMinimumSize(QSize(0, 50));
         lineEdit_name->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
-"border:1px groove gray;\n"
+"border:1px groove transparent;\n"
 "border-radius:7px;\n"
 "padding:2px 4px;\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
@@ -227,9 +215,9 @@ public:
 
         lineEdit_tel = new QLineEdit(Signup);
         lineEdit_tel->setObjectName("lineEdit_tel");
-        lineEdit_tel->setMinimumSize(QSize(0, 57));
+        lineEdit_tel->setMinimumSize(QSize(0, 50));
         lineEdit_tel->setStyleSheet(QString::fromUtf8("background-color: rgb(247, 247, 247);\n"
-"border:1px groove gray;\n"
+"border:1px groove transparent;\n"
 "border-radius:7px;\n"
 "padding:2px 4px;\n"
 "font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";"));
@@ -251,10 +239,6 @@ public:
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
-        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout_2->addItem(horizontalSpacer_3);
-
         pushButton_back = new QPushButton(Signup);
         pushButton_back->setObjectName("pushButton_back");
         QSizePolicy sizePolicy3(QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Maximum);
@@ -262,12 +246,12 @@ public:
         sizePolicy3.setVerticalStretch(0);
         sizePolicy3.setHeightForWidth(pushButton_back->sizePolicy().hasHeightForWidth());
         pushButton_back->setSizePolicy(sizePolicy3);
-        pushButton_back->setMinimumSize(QSize(74, 46));
-        pushButton_back->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);\n"
+        pushButton_back->setMinimumSize(QSize(110, 50));
+        pushButton_back->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 25 9pt \"Bahnschrift Light\";\n"
-"font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
-"border-radius:7px;"));
+"font: 12pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
+"border-radius:8px;"));
 
         horizontalLayout_2->addWidget(pushButton_back);
 
@@ -277,18 +261,14 @@ public:
 
         pushButton_sure = new QPushButton(Signup);
         pushButton_sure->setObjectName("pushButton_sure");
-        pushButton_sure->setMinimumSize(QSize(74, 46));
-        pushButton_sure->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 127);\n"
+        pushButton_sure->setMinimumSize(QSize(110, 50));
+        pushButton_sure->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 170, 0);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 25 9pt \"Bahnschrift Light\";\n"
-"font: 10pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
-"border-radius:7px;"));
+"font: 12pt \"\345\215\216\346\226\207\351\232\266\344\271\246\";\n"
+"border-radius:8px;"));
 
         horizontalLayout_2->addWidget(pushButton_sure);
-
-        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout_2->addItem(horizontalSpacer_5);
 
 
         verticalLayout_4->addLayout(horizontalLayout_2);
@@ -327,7 +307,7 @@ public:
         label_2->setText(QCoreApplication::translate("Signup", "\346\211\213\346\234\272\345\217\267", nullptr));
         lineEdit_tel->setPlaceholderText(QCoreApplication::translate("Signup", "\350\276\223\345\205\245\346\211\213\346\234\272\345\217\267", nullptr));
         pushButton_back->setText(QCoreApplication::translate("Signup", "\350\277\224\345\233\236", nullptr));
-        pushButton_sure->setText(QCoreApplication::translate("Signup", "\347\241\256\350\256\244", nullptr));
+        pushButton_sure->setText(QCoreApplication::translate("Signup", "\346\263\250\345\206\214", nullptr));
     } // retranslateUi
 
 };

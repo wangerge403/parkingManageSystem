@@ -9,11 +9,6 @@ DBthreadPool_Plate::DBthreadPool_Plate(QObject *parent) : QObject(parent),QRunna
     setAutoDelete(false);
 }
 
-// void DBthreadPool_Plate::RecvPlate(mysql* mysql, QString license_plate, QString formattedDateTime, QString location)
-// {
-
-// }
-
 void DBthreadPool_Plate::run()
 {
 

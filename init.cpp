@@ -8,12 +8,17 @@ initFile::initFile(QWidget *parent) :
     ui(new Ui::initFile)
 {
     ui->setupUi(this);
-    setWindowTitle("停车场初始化");
+    setWindowTitle("停车场配置");
     //设置label垂直布局
     QString str = ui->label->text();
     // ui->label->setText(str.split("",QString::SplitBehavir).join("\n"));
     ui->label->setText(str.split("\n", Qt::SkipEmptyParts).join("\n"));
     ui->label->setAlignment(Qt::AlignCenter);
+
+    QPixmap *pix = new QPixmap(":/icon/images/parking.png");
+    QSize sz = ui->label->size();
+    QPixmap scaledPix = pix->scaled(sz, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    ui->label->setPixmap(scaledPix);
 }
 
 initFile::~initFile()
